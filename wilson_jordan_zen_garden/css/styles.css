@@ -1,0 +1,19 @@
+h1 {
+	color: LightBlue;
+	background-color: DarkBlue;
+	font-size: 3em;
+	font-family: Tahoma, Arial, sans-serif;
+	padding: 5px; 
+	margin: 0;
+}
+
+h2 {
+	color: DarkBlue;
+	font-weight: normal;
+	border-bottom: 1px solid LightBlue;
+}
+
+p {
+	color: black;
+	line-height: 1.5;
+}
