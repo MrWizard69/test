@@ -7,7 +7,7 @@ nav.blue {border-radius: 3px;}
 nav.blue ul {margin: 0px; padding: 0px;}
 
 /* Top level */
-nav.blue li {list-style: none; float: left; position: relative;}
+nav.blue li {list-style: none; float: left; position: relative; }
 nav.blue li.drop a {padding-right: 30px;}
 nav.blue li a {display: block; padding: 9px 23px 10px; text-decoration: none; background: darkred; font-size: 12px; color: #fff; border-left: 1px solid black; text-shadow: 0px -1px 0px #000; border-radius: 5px;}
 nav.blue li a {background-position: 0px 0px;}
