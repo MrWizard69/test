@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8"/>
+		<title>This is the Title of the Page</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.4.custom.css">
+		<script src="js/jQuery.js"></script>
+		<script src="js/jquery-ui-1.10.4.custom.js"></script>
+		<script src="js/validate.js"></script>
+		<script src="js/main.js"></script>
+
+	</head>
+	<body>
+
+<form class="cmxform" id="commentForm" method="get" action="">
+	<fieldset>
+		<legend>Form! :D</legend>
+		<p>
+			<label for="cname">Name (required, at least 2 characters)</label>
+			<input id="cname" name="name" minlength="2" type="text" required />
+		<p>
+			<input class="submit" type="submit" value="Submit"/>
+		</p>
+	</fieldset>
+</form>
+
+<h2>Progressbar</h2>
+<div id="progressbar"></div>
+
+<div id="container" style="display:none">
+
+		<div id="default">
+			<h1>#{title}</h1>
+			<p>#{text}</p>
+		</div>
+
+	</body>
+</html>
