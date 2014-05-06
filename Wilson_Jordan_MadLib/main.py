@@ -14,10 +14,10 @@ money3 = 40
 total1 = money1 + money2
 
 people = [name1, money1, name2, money2, name3, money3]
-
+#This is everyone name and how much money they have to spend
 print "Here is everyone and their money: "
 print people
-
+#At the end of this line here is where the total1 variable shows up
 message1 = '''{name1} was walking around and minding his own business. {name1} has {money1} in his wallet. One day,  {name1} saw a new video game. {name1}  saw that he did not have enough to buy it, so he called up his good friend {name2}. {name2} has {money2} in his wallet. Together they have {total1}.'''
 
 
@@ -55,7 +55,7 @@ else:
 for i in range(1, 6, 2):
     print people[i] * 2
 
-print 'is what' + ' ' + name1 + ' ' + name2 + ' ' + name3 + ' ' + 'wish they had'
+print 'is what' + ' ' + name1 + ', ' + name2 + ', ' + name3 + ' wish they had'
 print 'one day the three of them got together. They wanted to come up with a complicated way to buy all three items in'
 print 'the magazine. So they came up with this'
 
@@ -76,7 +76,7 @@ def compli_calcular(a,b,c):
     b = money2 * 2
     c = money3 / 2
     new_fair = a * b / c
-    print 'This is how' + name3 + ' felt the future money should be contributed.'
+    print 'This is how ' + name3 + ' felt the future money should be contributed.'
     return new_fair
 
 new_new = compli_calcular(money1,money2,money3)
