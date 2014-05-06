@@ -15,6 +15,9 @@ total1 = money1 + money2
 
 people = [name1, money1, name2, money2, name3, money3]
 
+print "Here is everyone and their money: "
+print people
+
 message1 = '''{name1} was walking around and minding his own business. {name1} has {money1} in his wallet. One day,  {name1} saw a new video game. {name1}  saw that he did not have enough to buy it, so he called up his good friend {name2}. {name2} has {money2} in his wallet. Together they have {total1}.'''
 
 
@@ -31,9 +34,13 @@ game = int(raw_input('How much is one of the games?'))
 
 mag_info = {'Computers': comps, 'Software': soft, 'Games':game}
 
-print name3 + " also saw that " + mag_info['Games'] + " that " + name1 + " " + name2
-message3 = '''{name3} + " also saw that " + mag_info['Games'] + " that " + name1 + " " + name2'''
-if comps>soft:
+print mag_info['Games']
+print 'is the same game that ' + name1 + ' ' + name2 + ' wants!'
+print name3 + ' ' + ' would like to pool everyones money.'
+total1 += money3
+print total1 + ' is what they would all have if they all pooled their funds together.'
+
+if money1>soft:
     print 'comps win!'
 else:
     print 'soft win!'
