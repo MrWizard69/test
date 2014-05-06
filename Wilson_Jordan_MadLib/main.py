@@ -43,12 +43,14 @@ print name3 + ' ' + ' would like to pool everyones money.'
 total1 += money3
 print total1
 print 'is what they would all have if they all pooled their funds together.'
+
+#If one
 if money1>game:
     print name1 + ' can afford to buy it!'
 else:
     print name1 + ' can not afford to buy it!'
 
-
+#If two
 if money2 + money3>game:
     print name2 + ' ' + name3 + ' can afford to buy it!'
 else:
