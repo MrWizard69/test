@@ -6,10 +6,34 @@ DPW
 '''
 
 name1 = raw_input('Who is the first person?')
-val1 = raw_input('How much money do they have?')
+money1 = 20
 name2 = raw_input('Who is the second person?')
-val2 = raw_input('How much money do they have?')
+money2 = 30
 name3 = raw_input('Who is the third person?')
-val3 = raw_input('How much money do they have?')
+money3 = 40
+total1 = money1 + money2
 
-people = [name1, val1, name2, val2, name3, val3]
+people = [name1, money1, name2, money2, name3, money3]
+
+message1 = '''{name1} was walking around and minding his own business. {name1} has {money1} in his wallet. One day,  {name1} saw a new video game. {name1}  saw that he did not have enough to buy it, so he called up his good friend {name2}. {name2} has {money2} in his wallet. Together they have {total1}.'''
+
+
+message1 = message1.format(**locals())
+
+print message1
+
+message2 = '''{name3} recently bought a magazine with a bunch of nice stuff in it! There is both computers and software.'''
+message2 = message2.format(**locals())
+print message2
+comps = int(raw_input('How much is one of the computers?'))
+soft = int(raw_input('How much one of the software'))
+game = int(raw_input('How much is one of the games?'))
+
+mag_info = {'Computers': comps, 'Software': soft, 'Games':game}
+
+print name3 + " also saw that " + mag_info['Games'] + " that " + name1 + " " + name2
+message3 = '''{name3} + " also saw that " + mag_info['Games'] + " that " + name1 + " " + name2'''
+if comps>soft:
+    print 'comps win!'
+else:
+    print 'soft win!'
