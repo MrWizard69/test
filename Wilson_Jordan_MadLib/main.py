@@ -56,7 +56,7 @@ if money2 + money3>game:
 else:
     print name2 + ' ' + name3 + ' can not afford to buy it!'
 
-
+#A nice for loop
 for i in range(1, 6, 2):
     print people[i] * 2
 
