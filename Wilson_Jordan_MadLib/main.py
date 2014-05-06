@@ -66,3 +66,20 @@ def compli_calc(a,b,c):
     fair = a + b * c
     print name3 + ' owed everyone a favor...'
     print fair
+
+compli_calc(money1,money2,money3)
+
+print 'Not everyone thought that it was fair that someone had to pay so much, so a new calc was created!'
+
+def compli_calcular(a,b,c):
+    a = money1 * 2
+    b = money2 * 2
+    c = money3 / 2
+    new_fair = a * b / c
+    print 'This is how' + name3 + ' felt the future money should be contributed.'
+    return new_fair
+
+new_new = compli_calcular(money1,money2,money3)
+
+print new_new
+
