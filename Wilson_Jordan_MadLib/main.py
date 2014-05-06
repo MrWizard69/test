@@ -34,6 +34,7 @@ comps = int(raw_input('How much is one of the computers?'))
 soft = int(raw_input('How much one of the software'))
 game = int(raw_input('How much is one of the games?'))
 
+#This is the my dictionary and the two lines below it is where I display it
 mag_info = {'Computers': comps, 'Software': soft, 'Games':game}
 
 print mag_info['Games']
