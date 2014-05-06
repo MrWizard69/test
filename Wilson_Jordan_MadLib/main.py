@@ -5,11 +5,11 @@ Jordan Wilson
 DPW
 '''
 #This is where I collect the names of the characters
-name1 = raw_input('Who is the first person?')
+name1 = raw_input('Who is the first person? ')
 money1 = 20
-name2 = raw_input('Who is the second person?')
+name2 = raw_input('Who is the second person?' )
 money2 = 30
-name3 = raw_input('Who is the third person?')
+name3 = raw_input('Who is the third person? ')
 money3 = 40
 total1 = money1 + money2
 
@@ -30,9 +30,9 @@ message2 = message2.format(**locals())
 print message2
 
 #This is where I collect the prices of the items from the users
-comps = int(raw_input('How much is one of the computers?'))
-soft = int(raw_input('How much one of the software'))
-game = int(raw_input('How much is one of the games?'))
+comps = int(raw_input('How much is one of the computers? '))
+soft = int(raw_input('How much one of the software '))
+game = int(raw_input('How much is one of the games? '))
 
 #This is the my dictionary and the two lines below it is where I display it
 mag_info = {'Computers': comps, 'Software': soft, 'Games':game}
@@ -52,9 +52,9 @@ else:
 
 #If two
 if money2 + money3>game:
-    print name2 + ' ' + name3 + ' can afford to buy it!'
+    print name2 + ' and ' + name3 + ' can afford to buy it!'
 else:
-    print name2 + ' ' + name3 + ' can not afford to buy it!'
+    print name2 + ' and ' + name3 + ' can not afford to buy it!'
 
 #A nice for loop
 for i in range(1, 6, 2):
@@ -64,6 +64,7 @@ print 'is what' + ' ' + name1 + ', ' + name2 + ', ' + name3 + ' wish they had'
 print 'one day the three of them got together. They wanted to come up with a complicated way to buy all three items in'
 print 'the magazine. So they came up with this'
 
+#This is one of my first complicated functions
 def compli_calc(a,b,c):
     a = money1
     b = money2
@@ -75,7 +76,7 @@ def compli_calc(a,b,c):
 compli_calc(money1,money2,money3)
 
 print 'Not everyone thought that it was fair that someone had to pay so much, so a new calc was created!'
-
+#Some felt the first complicated function wasn't fair so this one was made as a result
 def compli_calcular(a,b,c):
     a = money1 * 2
     b = money2 * 2
