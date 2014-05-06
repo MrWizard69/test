@@ -28,6 +28,8 @@ print message1
 message2 = '''{name3} recently bought a magazine with a bunch of nice stuff in it! There is both computers and software.'''
 message2 = message2.format(**locals())
 print message2
+
+#This is where I collect the prices of the items from the users
 comps = int(raw_input('How much is one of the computers?'))
 soft = int(raw_input('How much one of the software'))
 game = int(raw_input('How much is one of the games?'))
