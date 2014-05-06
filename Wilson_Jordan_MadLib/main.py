@@ -38,9 +38,31 @@ print mag_info['Games']
 print 'is the same game that ' + name1 + ' ' + name2 + ' wants!'
 print name3 + ' ' + ' would like to pool everyones money.'
 total1 += money3
-print total1 + ' is what they would all have if they all pooled their funds together.'
-
-if money1>soft:
-    print 'comps win!'
+print total1
+print 'is what they would all have if they all pooled their funds together.'
+if money1>game:
+    print name1 + ' can afford to buy it!'
 else:
-    print 'soft win!'
+    print name1 + ' can not afford to buy it!'
+
+
+if money2 + money3>game:
+    print name2 + ' ' + name3 + ' can afford to buy it!'
+else:
+    print name2 + ' ' + name3 + ' can not afford to buy it!'
+
+
+for i in range(1, 6, 2):
+    print people[i] * 2
+
+print 'is what' + ' ' + name1 + ' ' + name2 + ' ' + name3 + ' ' + 'wish they had'
+print 'one day the three of them got together. They wanted to come up with a complicated way to buy all three items in'
+print 'the magazine. So they came up with this'
+
+def compli_calc(a,b,c):
+    a = money1
+    b = money2
+    c = money3
+    fair = a + b * c
+    print name3 + ' owed everyone a favor...'
+    print fair

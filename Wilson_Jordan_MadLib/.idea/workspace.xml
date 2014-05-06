@@ -26,7 +26,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="9" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.75460124" vertical-offset="261" max-vertical-offset="780">
+            <state line="67" column="14" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.78527606" vertical-offset="621" max-vertical-offset="1110">
               <folding />
             </state>
           </provider>
@@ -104,6 +104,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="recentsLimit" value="5" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -312,7 +313,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="9" selection-start="1409" selection-end="1409" vertical-scroll-proportion="0.75460124" vertical-offset="261" max-vertical-offset="780">
+        <state line="67" column="14" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.78527606" vertical-offset="621" max-vertical-offset="1110">
           <folding />
         </state>
       </provider>
