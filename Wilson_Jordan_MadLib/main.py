@@ -46,15 +46,15 @@ print 'is what they would all have if they all pooled their funds together.'
 
 #If one
 if money1>game:
-    print name1 + ' can afford to buy it!'
+    print name1 + ' can afford to buy it alone!'
 else:
-    print name1 + ' can not afford to buy it!'
+    print name1 + ' can not afford to buy it alone!'
 
 #If two
 if money2 + money3>game:
-    print name2 + ' and ' + name3 + ' can afford to buy it!'
+    print name2 + ' and ' + name3 + ' can afford to buy it together!'
 else:
-    print name2 + ' and ' + name3 + ' can not afford to buy it!'
+    print name2 + ' and ' + name3 + ' can not afford to buy it together!'
 
 #A nice for loop
 for i in range(1, 6, 2):
