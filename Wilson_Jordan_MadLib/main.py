@@ -4,7 +4,7 @@ Jordan Wilson
 5/5/14
 DPW
 '''
-
+#This is where I collect the names of the characters
 name1 = raw_input('Who is the first person?')
 money1 = 20
 name2 = raw_input('Who is the second person?')
