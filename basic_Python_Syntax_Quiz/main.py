@@ -11,8 +11,8 @@ def calc_area(): #this is calculate area and tell the user if they are making a 
 print calc_area() #this is where it's spit out
 
 beer = 99
-def count_down(beer):
+def count_down(beer): # this will play the beer song
     for i in range(beer, 1, -1):
-        print str(i) +" bottles of beer on the wall!"
-        print "Now you have " + str(i - 1) + " bottles of beer on the wall!"
+        print str(i) +" bottles of beer on the wall!" #this is where the beers number is displayed
+        print "Now you have " + str(i - 1) + " bottles of beer on the wall!" #this is where the next beer number is displayed
 print count_down(beer)
