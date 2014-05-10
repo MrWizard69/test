@@ -16,13 +16,13 @@ class HTMLPage(object):
         <input type="text" name="firstname" placeholder="First Name" />
         <input type="text" name="lastname" placeholder="Last Name" />
         <input type="text" name="cardnumber" placeholder="Credit Card Number" />
-        <input type="checkbox" name="resident" value="FL Resident">Are you a florida resident?
+        <input type="checkbox" name="resident" value="FL">Are you a florida resident?
 
         <select name="car">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Saab">Saab</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Audi">Audi</option>
         </select>
 
         <input type="submit" name="submit" value="go" />

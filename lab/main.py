@@ -17,6 +17,8 @@
 import webapp2
 #from FILE import CLASSNAME
 from page import HTMLPage
+from page1 import TellPage
+
 
 #blueprint for creating our web app
 class MainHandler(webapp2.RequestHandler):
@@ -26,6 +28,7 @@ class MainHandler(webapp2.RequestHandler):
         #prints out to the web browser
         #self.response.write('Hello world!')
         p = HTMLPage()#calls constructor __init__ function inside HTMLPage class
+        a = TellPage()
         ##atributes:
             #   instance.attribute
         ##methods:
@@ -37,7 +40,7 @@ class MainHandler(webapp2.RequestHandler):
             sele = self.request.GET['car']
             cn = self.request.GET['cardnumber']
 
-            self.response.write(p.print_out(fn +' ' + ln + ' ' + cn + ' ' + cb1 + ' ' + sele))
+            self.response.write(a.print_out("Thank you " + fn +' ' + ln + ' for choosing our car service! Your ' + sele + ' is waiting for you at the ' + cb1 + " store. Remember, with us your credit card number is safe...( " + cn + " )" ))
         else:
             self.response.write(p.print_out(" "))
 
