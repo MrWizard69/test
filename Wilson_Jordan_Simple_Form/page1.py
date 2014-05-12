@@ -7,6 +7,7 @@ class TellPage(object):
     <head>
         <title>Welcome to my page</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css"
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body>
         '''

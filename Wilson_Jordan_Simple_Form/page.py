@@ -5,18 +5,19 @@ class HTMLPage(object):
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Welcome to my page</title>
+        <title>BUY A NEW CAR!</title>
         <link href="css/styles.css" rel="stylesheet" type="text/css"
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body>
         '''
         self.page_content = '''
         <h1>Pick Up Your New Car Today!</h1>
-    <form method="GET" action="">
+    <form method="GET" action="" id="wrapper">
         <input type="text" name="firstname" placeholder="First Name" />
         <input type="text" name="lastname" placeholder="Last Name" />
         <input type="text" name="cardnumber" placeholder="Credit Card Number" />
-        <input type="checkbox" name="resident" value="FL">Are you a florida resident?
+        <input type="checkbox" name="resident" value="FL" />Are you a florida resident?
 
         <select name="car">
             <option value="Volvo">Volvo</option>
@@ -26,6 +27,7 @@ class HTMLPage(object):
         </select>
 
         <input type="submit" name="submit" value="go" />
+        <p>You can always trust us! ;D</p>
     </form>
         '''
         self.page_close = '''

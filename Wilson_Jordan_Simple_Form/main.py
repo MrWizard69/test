@@ -40,6 +40,7 @@ class MainHandler(webapp2.RequestHandler):
             sele = self.request.GET['car']
             cn = self.request.GET['cardnumber']
 
+
             self.response.write(a.print_out("Thank you " + fn +' ' + ln + ' for choosing our car service! Your ' + sele + ' is waiting for you at the ' + cb1 + " store. Remember, with us your credit card number is safe...( " + cn + " )" ))
         else:
             self.response.write(p.print_out(" "))
