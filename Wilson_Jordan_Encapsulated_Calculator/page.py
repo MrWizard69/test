@@ -1,4 +1,4 @@
-class HTMLPage(object):
+class HomePage(object):
     def __init__(self): #constructor
         self.page_open = '''
 
@@ -15,7 +15,8 @@ class HTMLPage(object):
         <h1>Pick Up Your New Car Today!</h1>
         <div id="wrapper">
             <ul>
-                <li>/><input type="submit" name="submit" value="go" /></li>
+                <li><a href="?page1=a">Page1</a></li>
+                <li><a href="?page2">Page2</a></li>
             </ul>
         </div>
         '''

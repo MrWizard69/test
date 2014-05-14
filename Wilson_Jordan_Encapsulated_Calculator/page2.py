@@ -1,4 +1,4 @@
-class InfoPage1(object):
+class InfoPage2(object):
     def __init__(self): #constructor
         self.page_open = '''
 
@@ -12,7 +12,7 @@ class InfoPage1(object):
     <body>
         '''
         self.page_content = '''
-        <h1>Page 1</h1>
+        <h1>Page 2</h1>
         '''
         self.page_close = '''
     </body>

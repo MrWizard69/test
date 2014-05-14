@@ -16,8 +16,9 @@
 #
 import webapp2
 #from FILE import CLASSNAME
-from page import HTMLPage
-from page1 import TellPage
+from page import HomePage
+from page1 import InfoPage1
+from page2 import InfoPage2
 
 
 #blueprint for creating our web app
@@ -27,22 +28,26 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         #prints out to the web browser
         #self.response.write('Hello world!')
-        p = HTMLPage()#calls constructor __init__ function inside HTMLPage class
-        a = TellPage()
+        p = HomePage()#calls constructor __init__ function inside HTMLPage class
+        a = InfoPage1()
+        a1 = InfoPage2()
         page1 = "?page1"
+        page2 = "?page2"
         ##atributes:
             #   instance.attribute
         ##methods:
             #   instance.method()
         if self.request.GET:
-            fn = self.request.GET['firstname']
+            #fn = self.request.GET['firstname']
             #ln = self.request.GET['lastname']
             #cb1 = self.request.GET['resident']
             #sele = self.request.GET['car']
             #cn = self.request.GET['cardnumber']
 
-            if fn == "?page1":
+            if page1 == "?page1":
                 self.response.write(a.print_out("Thank you " ))
+            elif page2 == "?page2":
+                self.response.write(a1.print_out("Thank you " ))
 
         else:
             self.response.write(p.print_out(" "))
