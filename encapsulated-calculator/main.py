@@ -29,44 +29,44 @@ class MainHandler(webapp2.RequestHandler):
         suzie.cup = 2 * cups
         suzie.pit = 1 * pitcher
         suzie.total = suzie.lem + suzie.sug + suzie.cup + suzie.pit
+        self.response.write('<p>Suzie needs $'+ suzie.print_info() + ' for supplies </p>')
         suzie.update()
-        self.response.write("Suzie needs "+ suzie.print_info() + " for supplies")
 
         brian = lemstand()
         brian.lem = 33 * lemons
         brian.sug = 6 * sugar
         brian.cup = 5 * cups
         brian.pit = 2 * pitcher
-        brian.total1 = brian.lem + brian.sug + brian.cup + brian.pit
+        brian.total = brian.lem + brian.sug + brian.cup + brian.pit
+        self.response.write('<p>Brian needs $' + brian.print_info() + ' for supplies </p>')
         brian.update()
-        self.response.write(brian.print_info())
 
         cindy = lemstand()
         cindy.lem = 66 * lemons
         cindy.sug = 10 * sugar
         cindy.cup = 25 * cups
         cindy.pit = 4 * pitcher
-        cindy.total2 = cindy.lem + cindy.sug + cindy.cup + cindy.pit
+        cindy.total = cindy.lem + cindy.sug + cindy.cup + cindy.pit
+        self.response.write('<p> Cindy needs $' + cindy.print_info() + ' for supplies </p>')
         cindy.update()
-        self.response.write(cindy.print_info())
 
         david = lemstand()
         david.lem = 66 * lemons
         david.sug = 10 * sugar
         david.cup = 25 * cups
         david.pit = 4 * pitcher
-        david.total3 = david.lem + david.sug + david.cup + david.pit
+        david.total = david.lem + david.sug + david.cup + david.pit
+        self.response.write('<p> David needs $' + david.print_info() +'  for supplies</p>')
         david.update()
-        self.response.write(david.print_info())
 
         adri = lemstand()
         adri.lem = 100 * lemons
         adri.sug = 50 * sugar
         adri.cup = 100 * cups
         adri.pit = 10 * pitcher
-        adri.total4 = adri.lem + adri.sug + adri.cup + adri.pit
+        adri.total = adri.lem + adri.sug + adri.cup + adri.pit
+        self.response.write('<p> Adri needs $' + adri.print_info() + ' for supplies </p>')
         adri.update()
-        self.response.write(adri.print_info())
 
 
 class lemstand(object):
@@ -99,7 +99,7 @@ class lemstand(object):
         </html>
         '''
 
-        self.__page = self.__open + self.__content+ self.__close
+        self.__page = self.__open + self.__content + self.__close
 
     def print_info(self):
         return self.__page
@@ -111,7 +111,6 @@ class lemstand(object):
     @total.setter
     def total(self, total):
         self.__page = str(total)
-        #self.update()
 
     def update(self):
         self.__page = self.__page.format(**locals())
