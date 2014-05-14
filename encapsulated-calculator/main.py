@@ -82,13 +82,18 @@ class lemstand(object):
         <html>
             <head>
                 <title></title>
+                <link href="css/styles.css" rel="stylesheet" type="text/css"
+                <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
             <head>
         <body>
+        <div id='wrapper'>
         '''
         self.__content = '''
                 <p> ${self.total}</p>
                 '''
         self.__close = '''
+
+        </div>
 
         </body>
         </html>
@@ -106,7 +111,7 @@ class lemstand(object):
     @total.setter
     def total(self, total):
         self.__page = str(total)
-        self.update()
+        #self.update()
 
     def update(self):
         self.__page = self.__page.format(**locals())
