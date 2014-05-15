@@ -37,7 +37,7 @@ class MainHandler(webapp2.RequestHandler):
         brian.sug = 6 * sugar
         brian.cup = 5 * cups
         brian.pit = 2 * pitcher
-        brian.total = brian.lem + brian.sug + brian.cup + brian.pit
+        brian.total1 = brian.lem + brian.sug + brian.cup + brian.pit
         self.response.write('<p>Brian needs $' + brian.print_info() + ' for supplies </p>')
         brian.update()
 
@@ -75,6 +75,8 @@ class lemstand(object):
         self.__sug = 0
         self.__cup = 0
         self.__pit = 0
+        self.__total = 0
+
 
         self.__open = '''
 
@@ -86,14 +88,14 @@ class lemstand(object):
                 <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
             <head>
         <body>
-        <div id='wrapper'>
+            <div id='wrapper'>
         '''
         self.__content = '''
-                <p> ${self.total}</p>
+                    <p>{self.total}</p>
                 '''
         self.__close = '''
 
-        </div>
+            </div>
 
         </body>
         </html>

@@ -26,7 +26,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="28" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.96330273" vertical-offset="0" max-vertical-offset="1425">
+            <state line="49" column="28" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.5111402" vertical-offset="345" max-vertical-offset="1425">
               <folding />
             </state>
           </provider>
@@ -102,7 +102,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Wilson_Jordan_Simple_Form" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../inheritance-abstraction" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="tests" factoryName="py.test">
@@ -238,7 +238,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="24" width="1400" height="860" extended-state="1" />
+    <frame x="5" y="24" width="1400" height="860" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -286,7 +286,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="28" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.96330273" vertical-offset="0" max-vertical-offset="1425">
+        <state line="49" column="28" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.5111402" vertical-offset="345" max-vertical-offset="1425">
           <folding />
         </state>
       </provider>
