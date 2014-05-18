@@ -103,7 +103,7 @@ class Animal(PageBuilder):
     def __init__(self):
         PageBuilder.__init__(self)
 
-    def gather(self, content):
+    def gather(self, content): #places the info into the place holders in the html
         self.phylum = content.phylum
         self.a_class = content.a_class
         self.order = content.order
