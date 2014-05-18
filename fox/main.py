@@ -131,7 +131,7 @@ class Cow(Animal): # le cow
             cow.geolocation = "Geolocation: On Farms Everywhere"
             cow.sound = "Sound: MEROOOOO"
 
-            self.gather(cow)
+            self.gather(cow) #puts all this info under content
 
 class Duck(Animal): # le duck
         def __init__(self):
