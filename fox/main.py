@@ -80,7 +80,7 @@ class PageBuilder(object): #the html page
         '''
         self.all = ''''''
 
-        self.phylum = "" 
+        self.phylum = "" #place holders for the information
         self.a_class = ""
         self.order = ""
         self.family = ""
