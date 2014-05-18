@@ -116,7 +116,7 @@ class Animal(PageBuilder):
         self.sound = content.sound
 
 
-class Cow(Animal):
+class Cow(Animal): # le cow
         def __init__(self):
             Animal.__init__(self)
             cow = Animal()
