@@ -120,16 +120,16 @@ class Cow(Animal):
         def __init__(self):
             Animal.__init__(self)
             cow = Animal()
-            cow.phylum = "Chordate"
-            cow.a_class = "Mammalia"
-            cow.order = "Artiodactyla"
-            cow.family = "Bovidae"
-            cow.genus = "Bos and Species Bos Taurus"
+            cow.phylum = "Phylum: Chordate"
+            cow.a_class = " Class: Mammalia"
+            cow.order = "Order: Artiodactyla"
+            cow.family = " Family: Bovidae"
+            cow.genus = "Genus: Bos Taurus"
             cow.url = "5"
-            cow.life = "15 Years"
-            cow.habitat = "Grasslands and Forests"
-            cow.geolocation = "On Farms Everywhere"
-            cow.sound = "MEROOOOO"
+            cow.life = "Lifespan: 15 Years"
+            cow.habitat = "Habitat: Grasslands and Forests"
+            cow.geolocation = "Geolocation: On Farms Everywhere"
+            cow.sound = "Sound: MEROOOOO"
 
             self.gather(cow)
 
@@ -137,16 +137,16 @@ class Duck(Animal):
         def __init__(self):
             Animal.__init__(self)
             duck = Animal()
-            duck.phylum = "Chordata"
-            duck.a_class = "Aves"
-            duck.order = "Anseriformes"
-            duck.family = "Anatidae"
-            duck.genus = "Duck"
+            duck.phylum = "Phylum: Chordata"
+            duck.a_class = "Class: Aves"
+            duck.order = "Order: Anseriformes"
+            duck.family = "Family: Anatidae"
+            duck.genus = "Genus: Duck"
             duck.url = "14"
-            duck.life = "4 - 8 years"
-            duck.habitat = "Rivers, lakes and woodland wetlands"
-            duck.geolocation = "At a pond near you!"
-            duck.sound = "QUACK!"
+            duck.life = "Lifespan: 4 - 8 years"
+            duck.habitat = "Habitat: Rivers, lakes and woodland wetlands"
+            duck.geolocation = "Geolocation: At a pond near you!"
+            duck.sound = "Sound: QUACK!"
 
             self.gather(duck)
 
@@ -154,16 +154,16 @@ class Fox(Animal):
         def __init__(self):
             Animal.__init__(self)
             fox = Animal()
-            fox.phylum = "Chordata"
-            fox.a_class = "Mammalia"
-            fox.order = "Carnivora"
-            fox.family = "Canidae"
-            fox.genus = "Canis"
+            fox.phylum = "Phylum: Chordata"
+            fox.a_class = "Class: Mammalia"
+            fox.order = "Order: Carnivora"
+            fox.family = "Family: Canidae"
+            fox.genus = "Genus: Canis"
             fox.url = "23"
-            fox.life = "5 Years"
-            fox.habitat = "The entire northern hemisphere from the Arctic Circle to North Africa, and Central America."
-            fox.geolocation = "Everywhere"
-            fox.sound = "Ring-ding-ding-ding-dingeringeding!"
+            fox.life = "Lifespan: 5 Years"
+            fox.habitat = "Habitat: The northern hemisphere from the Arctic Circle to North Africa, and Central America."
+            fox.geolocation = "Geolocation: Everywhere"
+            fox.sound = "Sound: Ring-ding-ding-ding-dingeringeding!"
 
             self.gather(fox)
 
