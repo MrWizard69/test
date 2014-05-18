@@ -31,11 +31,11 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:
             animal = self.request.GET['an']
 
-            if animal == "o1":
+            if animal == "c":
                 self.response.write(ani[0].print_out())
-            elif animal == "o2":
+            elif animal == "d":
                 self.response.write(ani[1].print_out())
-            elif animal == "o3":
+            elif animal == "f":
                 self.response.write(ani[2].print_out())
         else:
             self.response.write(p.print_out())
@@ -51,15 +51,19 @@ class PageBuilder(object):
         <html>
         <head>
             <title>{self.title}</title>
+            <link href="css/styles.css" rel="stylesheet" type="text/css"
+            <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
         </head>
         <body>
         '''
         self.close = '''</body></html>'''
         self.content = '''
+        <div id="wrapper">
+        <h1>{self.title}</h1>
         <ul>
-            <li><a href="?an=o1">Cow</a></li>
-            <li><a href="?an=o2">Duck</a></li>
-            <li><a href="?an=o3">Fox</a></li>
+            <li><a href="?an=c">Cow</a></li>
+            <li><a href="?an=d">Duck</a></li>
+            <li><a href="?an=f">Fox</a></li>
         </ul>
         <p>{self.phylum}</p>
         <p>{self.a_class}</p>
@@ -72,6 +76,7 @@ class PageBuilder(object):
         <p>{self.geolocation}</p>
         <p>{self.sound}</p>
         Content goes here
+        </div>
         '''
         self.all = ''''''
 
