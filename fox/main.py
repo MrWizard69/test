@@ -19,9 +19,9 @@ import webapp2
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = PageBuilder()
-        o1 = Object1()
-        o2 = Object2()
-        o3 = Object3()
+        o1 = Cow()
+        o2 = Duck()
+        o3 = Fox()
         p.title = "Welcome!"
         o1.title = 'Object1'
         o2.title = 'Object2'
@@ -111,56 +111,56 @@ class Animal(PageBuilder):
         self.sound = content.sound
 
 
-class Object1(Animal):
+class Cow(Animal):
         def __init__(self):
             Animal.__init__(self)
-            object1 = Animal()
-            object1.phylum = "1"
-            object1.a_class = "2"
-            object1.order = "3"
-            object1.family = "3"
-            object1.genus = "4"
-            object1.url = "5"
-            object1.life = "6"
-            object1.habitat = "7"
-            object1.geolocation = "8"
-            object1.sound = "Sound1"
+            cow = Animal()
+            cow.phylum = "1"
+            cow.a_class = "2"
+            cow.order = "3"
+            cow.family = "3"
+            cow.genus = "4"
+            cow.url = "5"
+            cow.life = "6"
+            cow.habitat = "7"
+            cow.geolocation = "8"
+            cow.sound = "Sound1"
 
-            self.gather(object1)
+            self.gather(cow)
 
-class Object2(Animal):
+class Duck(Animal):
         def __init__(self):
             Animal.__init__(self)
-            object2 = Animal()
-            object2.phylum = "9"
-            object2.a_class = "10"
-            object2.order = "11"
-            object2.family = "12"
-            object2.genus = "13"
-            object2.url = "14"
-            object2.life = "15"
-            object2.habitat = "16"
-            object2.geolocation = "17"
-            object2.sound = "Sound2"
+            duck = Animal()
+            duck.phylum = "9"
+            duck.a_class = "10"
+            duck.order = "11"
+            duck.family = "12"
+            duck.genus = "13"
+            duck.url = "14"
+            duck.life = "15"
+            duck.habitat = "16"
+            duck.geolocation = "17"
+            duck.sound = "Sound2"
 
-            self.gather(object2)
+            self.gather(duck)
 
-class Object3(Animal):
+class Fox(Animal):
         def __init__(self):
             Animal.__init__(self)
-            object3 = Animal()
-            object3.phylum = "18"
-            object3.a_class = "19"
-            object3.order = "20"
-            object3.family = "21"
-            object3.genus = "22"
-            object3.url = "23"
-            object3.life = "24"
-            object3.habitat = "25"
-            object3.geolocation = "26"
-            object3.sound = "Sound3"
+            fox = Animal()
+            fox.phylum = "18"
+            fox.a_class = "19"
+            fox.order = "20"
+            fox.family = "21"
+            fox.genus = "22"
+            fox.url = "23"
+            fox.life = "24"
+            fox.habitat = "25"
+            fox.geolocation = "26"
+            fox.sound = "Sound3"
 
-            self.gather(object3)
+            self.gather(fox)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
