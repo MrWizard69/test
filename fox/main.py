@@ -75,7 +75,7 @@ class PageBuilder(object):
         <p>{self.habitat}</p>
         <p>{self.geolocation}</p>
         <p>{self.sound}</p>
-        Content goes here
+        <p>Cow goes moo and ducks go quack quack. But there's one sound that no one knows... WHAT DOES THE FOX SAY?</p>
         </div>
         '''
         self.all = ''''''
@@ -120,15 +120,15 @@ class Cow(Animal):
         def __init__(self):
             Animal.__init__(self)
             cow = Animal()
-            cow.phylum = "1"
-            cow.a_class = "2"
-            cow.order = "3"
-            cow.family = "3"
-            cow.genus = "4"
+            cow.phylum = "Chordate"
+            cow.a_class = "Mammalia"
+            cow.order = "Artiodactyla"
+            cow.family = "Bovidae"
+            cow.genus = "Bos and Species Bos Taurus"
             cow.url = "5"
-            cow.life = "6"
-            cow.habitat = "7"
-            cow.geolocation = "8"
+            cow.life = "15 Years"
+            cow.habitat = "Grasslands and Forests"
+            cow.geolocation = "On Farms Everywhere"
             cow.sound = "MEROOOOO"
 
             self.gather(cow)
@@ -137,15 +137,15 @@ class Duck(Animal):
         def __init__(self):
             Animal.__init__(self)
             duck = Animal()
-            duck.phylum = "9"
-            duck.a_class = "10"
-            duck.order = "11"
-            duck.family = "12"
-            duck.genus = "13"
+            duck.phylum = "Chordata"
+            duck.a_class = "Aves"
+            duck.order = "Anseriformes"
+            duck.family = "Anatidae"
+            duck.genus = "Duck"
             duck.url = "14"
-            duck.life = "15"
-            duck.habitat = "16"
-            duck.geolocation = "17"
+            duck.life = "4 - 8 years"
+            duck.habitat = "Rivers, lakes and woodland wetlands"
+            duck.geolocation = "At a pond near you!"
             duck.sound = "QUACK!"
 
             self.gather(duck)
@@ -154,16 +154,16 @@ class Fox(Animal):
         def __init__(self):
             Animal.__init__(self)
             fox = Animal()
-            fox.phylum = "18"
-            fox.a_class = "19"
-            fox.order = "20"
-            fox.family = "21"
-            fox.genus = "22"
+            fox.phylum = "Chordata"
+            fox.a_class = "Mammalia"
+            fox.order = "Carnivora"
+            fox.family = "Canidae"
+            fox.genus = "Canis"
             fox.url = "23"
-            fox.life = "24"
-            fox.habitat = "25"
-            fox.geolocation = "26"
-            fox.sound = "YIP YIP YIP!"
+            fox.life = "5 Years"
+            fox.habitat = "The entire northern hemisphere from the Arctic Circle to North Africa, and Central America."
+            fox.geolocation = "Everywhere"
+            fox.sound = "Ring-ding-ding-ding-dingeringeding!"
 
             self.gather(fox)
 
