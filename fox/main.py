@@ -26,7 +26,7 @@ class MainHandler(webapp2.RequestHandler):
         c.title = 'Cow'
         d.title = 'Duck'
         f.title = 'Fox'
-        ani = [ c, d, f]
+        ani = [c, d, f]
 
         if self.request.GET:
             animal = self.request.GET['an']
