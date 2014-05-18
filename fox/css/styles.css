@@ -21,23 +21,10 @@ h1{
     color: white;
 }
 
-form{
-    margin: 0 auto;
+ul{
+    list-style-type: none;
 }
 
-input{
-    background-color: blue;
-    color: white;
-    margin: 2%;
-}
-
-input:hover{
-    background-color: white;
-    color: blue;
-}
-
-select{
-    background-color: blue;
-    color: white;
-    margin: 2%;
+li{
+    display: inline;
 }
