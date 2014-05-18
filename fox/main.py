@@ -150,7 +150,7 @@ class Duck(Animal): # le duck
 
             self.gather(duck)
 
-class Fox(Animal):
+class Fox(Animal): #le fox
         def __init__(self):
             Animal.__init__(self)
             fox = Animal()
