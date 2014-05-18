@@ -133,7 +133,7 @@ class Cow(Animal): # le cow
 
             self.gather(cow)
 
-class Duck(Animal):
+class Duck(Animal): # le duck
         def __init__(self):
             Animal.__init__(self)
             duck = Animal()
