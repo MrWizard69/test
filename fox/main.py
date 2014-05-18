@@ -19,14 +19,14 @@ import webapp2
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = PageBuilder()
-        o1 = Cow()
-        o2 = Duck()
-        o3 = Fox()
+        c = Cow()
+        d = Duck()
+        f = Fox()
         p.title = "Welcome!"
-        o1.title = 'Object1'
-        o2.title = 'Object2'
-        o3.title = 'Object3'
-        ani = [ o1, o2, o3]
+        c.title = 'Cow'
+        d.title = 'Duck'
+        f.title = 'Fox'
+        ani = [ c, d, f]
 
         if self.request.GET:
             animal = self.request.GET['an']
@@ -57,9 +57,9 @@ class PageBuilder(object):
         self.close = '''</body></html>'''
         self.content = '''
         <ul>
-            <li><a href="?an=o1">Object1</a></li>
-            <li><a href="?an=o2">Object2</a></li>
-            <li><a href="?an=o3">Object3</a></li>
+            <li><a href="?an=o1">Cow</a></li>
+            <li><a href="?an=o2">Duck</a></li>
+            <li><a href="?an=o3">Fox</a></li>
         </ul>
         <p>{self.phylum}</p>
         <p>{self.a_class}</p>
@@ -124,7 +124,7 @@ class Cow(Animal):
             cow.life = "6"
             cow.habitat = "7"
             cow.geolocation = "8"
-            cow.sound = "Sound1"
+            cow.sound = "MEROOOOO"
 
             self.gather(cow)
 
@@ -141,7 +141,7 @@ class Duck(Animal):
             duck.life = "15"
             duck.habitat = "16"
             duck.geolocation = "17"
-            duck.sound = "Sound2"
+            duck.sound = "QUACK!"
 
             self.gather(duck)
 
@@ -158,7 +158,7 @@ class Fox(Animal):
             fox.life = "24"
             fox.habitat = "25"
             fox.geolocation = "26"
-            fox.sound = "Sound3"
+            fox.sound = "YIP YIP YIP!"
 
             self.gather(fox)
 
