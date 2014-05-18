@@ -44,7 +44,7 @@ class MainHandler(webapp2.RequestHandler):
 
 
 
-class PageBuilder(object):
+class PageBuilder(object): #the html page
     def __init__(self):
         self.open = '''
         <!DOCTYPE html>
@@ -80,7 +80,7 @@ class PageBuilder(object):
         '''
         self.all = ''''''
 
-        self.phylum = ""
+        self.phylum = "" 
         self.a_class = ""
         self.order = ""
         self.family = ""
