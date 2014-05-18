@@ -148,7 +148,7 @@ class Duck(Animal): # le duck
             duck.geolocation = "Geolocation: At a pond near you!"
             duck.sound = "Sound: QUACK!"
 
-            self.gather(duck)
+            self.gather(duck) #puts all this info under content
 
 class Fox(Animal): #le fox
         def __init__(self):
@@ -165,7 +165,7 @@ class Fox(Animal): #le fox
             fox.geolocation = "Geolocation: Everywhere"
             fox.sound = "Sound: Ring-ding-ding-ding-dingeringeding!"
 
-            self.gather(fox)
+            self.gather(fox) #puts all this info under content
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
