@@ -70,6 +70,7 @@ class PageBuilder(object):
         <p>{self.life}</p>
         <p>{self.habitat}</p>
         <p>{self.geolocation}</p>
+        <p>{self.sound}</p>
         Content goes here
         '''
         self.all = ''''''
