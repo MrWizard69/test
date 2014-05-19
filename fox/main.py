@@ -70,7 +70,7 @@ class PageBuilder(object): #the html page
         <p>{self.order}</p>
         <p>{self.family}</p>
         <p>{self.genus}</p>
-        <p>{self.url}</p>
+        <img src="{self.url}">
         <p>{self.life}</p>
         <p>{self.habitat}</p>
         <p>{self.geolocation}</p>
@@ -125,7 +125,7 @@ class Cow(Animal): # le cow
             cow.order = "Order: Artiodactyla"
             cow.family = " Family: Bovidae"
             cow.genus = "Genus: Bos Taurus"
-            cow.url = "<img src='images/cow.jpg' alt='cow'>"
+            cow.url = "http://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg" #wiki commons
             cow.life = "Lifespan: 15 Years"
             cow.habitat = "Habitat: Grasslands and Forests"
             cow.geolocation = "Geolocation: On Farms Everywhere"
@@ -142,7 +142,7 @@ class Duck(Animal): # le duck
             duck.order = "Order: Anseriformes"
             duck.family = "Family: Anatidae"
             duck.genus = "Genus: Duck"
-            duck.url = "<img src='images/duck.jpg' alt='duck'>"
+            duck.url = "http://upload.wikimedia.org/wikipedia/commons/5/51/Mandarin.duck.arp.jpg" #wiki commons
             duck.life = "Lifespan: 4 - 8 years"
             duck.habitat = "Habitat: Rivers, lakes and woodland wetlands"
             duck.geolocation = "Geolocation: At a pond near you!"
@@ -159,7 +159,7 @@ class Fox(Animal): #le fox
             fox.order = "Order: Carnivora"
             fox.family = "Family: Canidae"
             fox.genus = "Genus: Canis"
-            fox.url = "<img src='images/fox.jpg' alt='fox'>"
+            fox.url = "http://upload.wikimedia.org/wikipedia/commons/d/df/Fox_study_6.jpg" #from wiki commons
             fox.life = "Lifespan: 5 Years"
             fox.habitat = "Habitat: The northern hemisphere from the Arctic Circle to North Africa, and Central America."
             fox.geolocation = "Geolocation: Everywhere"

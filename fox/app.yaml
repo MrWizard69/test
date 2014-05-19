@@ -9,7 +9,7 @@ handlers:
   static_dir: css
 
   - url: /images
-  static_dir: jpg
+    static_dir: images
 
 
 - url: /favicon\.ico
@@ -22,5 +22,3 @@ handlers:
 libraries:
 - name: webapp2
   version: "2.5.2"
-
-
