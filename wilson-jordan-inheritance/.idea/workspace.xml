@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8655c3c-26db-4bb2-a9fe-c9092d97cb9c" name="Default" comment="" />
-    <ignored path="getts-setters2.iws" />
+    <list default="true" id="25c6b65a-9e6d-43a2-91d3-a7e639a46def" name="Default" comment="" />
+    <ignored path="wilson-jordan-inheritance.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,14 +19,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="getts-setters2" />
+    <favorites_list name="wilson-jordan-inheritance" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="8" selection-start="439" selection-end="465" vertical-scroll-proportion="0.3931848" vertical-offset="15" max-vertical-offset="930">
+            <state line="26" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.5111402" vertical-offset="0" max-vertical-offset="763">
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
+    <option name="x" value="10" />
     <option name="y" value="36" />
     <option name="width" value="1400" />
     <option name="height" value="860" />
@@ -78,27 +78,27 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="getts-setters2" />
+              <option name="myItemId" value="wilson-jordan-inheritance" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="getts-setters2" />
+              <option name="myItemId" value="wilson-jordan-inheritance" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="getts-setters2" />
+              <option name="myItemId" value="wilson-jordan-inheritance" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -110,14 +110,14 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f8655c3c-26db-4bb2-a9fe-c9092d97cb9c" name="Default" comment="" />
-      <created>1399936779734</created>
-      <updated>1399936779734</updated>
+      <changelist id="25c6b65a-9e6d-43a2-91d3-a7e639a46def" name="Default" comment="" />
+      <created>1400554500063</created>
+      <updated>1400554500063</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="36" width="1400" height="860" extended-state="0" />
+    <frame x="10" y="36" width="1400" height="860" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -153,35 +153,19 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="930">
+        <state line="26" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="555">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="8" selection-start="439" selection-end="465" vertical-scroll-proportion="0.3931848" vertical-offset="15" max-vertical-offset="930">
+        <state line="26" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.5111402" vertical-offset="0" max-vertical-offset="763">
           <folding />
         </state>
       </provider>
