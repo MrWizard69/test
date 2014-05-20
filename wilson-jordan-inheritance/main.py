@@ -19,12 +19,34 @@ import webapp2
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
-        g = Grade()
 
+        self.response.write(p)
 
+class Page(object):
+    def __init__(self):
 
+        self.avr = ""
+        self.gpa = ""
+        self.grd = ""
 
+class school(Page):
+    def __init__(self):
+        Page.__init__(self)
 
+    def join(self, filler):
+        self.avr = filler.avr
+        self.gpa = filler.gpa
+        self.grd = filler.grd
+
+class Grade(school):
+        def __init__(self):
+            school.__init__(self)
+            pl = school()
+            pl.avr = "86"
+            pl.gpa = "3.33"
+            pl.grd = "B+"
+
+            self.join(Grade)
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)

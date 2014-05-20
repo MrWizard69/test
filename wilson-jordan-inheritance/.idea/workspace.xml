@@ -26,7 +26,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.5111402" vertical-offset="0" max-vertical-offset="763">
+            <state line="22" column="30" selection-start="729" selection-end="729" vertical-scroll-proportion="0.27260813" vertical-offset="122" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
@@ -47,8 +47,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="36" />
+    <option name="x" value="14" />
+    <option name="y" value="22" />
     <option name="width" value="1400" />
     <option name="height" value="860" />
   </component>
@@ -117,8 +117,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="36" width="1400" height="860" extended-state="0" />
-    <editor active="false" />
+    <frame x="14" y="22" width="1400" height="860" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -165,7 +165,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.5111402" vertical-offset="0" max-vertical-offset="763">
+        <state line="22" column="30" selection-start="729" selection-end="729" vertical-scroll-proportion="0.27260813" vertical-offset="122" max-vertical-offset="885">
           <folding />
         </state>
       </provider>
