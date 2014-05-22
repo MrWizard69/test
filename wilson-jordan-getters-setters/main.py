@@ -20,6 +20,24 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         self.response.write('Hello world!')
 
+class Page(object):
+    def __init__(self):
+        self.__open ='''
+        <!DOCTYPE HTML>
+        <html>
+        <head>
+            <title>Count it up</title>
+        </head>
+        <body>
+
+            <a href="cnt=counter">Count Up</a>'''
+
+        self.__close = '''
+        </body>
+        </html>'''
+
+        self.__html = self.__open + self.__close
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
