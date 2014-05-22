@@ -18,6 +18,7 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        p = Page()
         self.response.write('Hello world!')
 
 class Page(object):
@@ -37,6 +38,21 @@ class Page(object):
         </html>'''
 
         self.__html = self.__open + self.__close
+
+    @property
+    def counter(self):
+        return self.__counter
+
+    @counter.setter
+    def counter(self, new_cnt):
+        self.__counter = new_cnt
+        self.update()
+
+    def print_out(self):
+        return self.__html
+
+    def update(self):
+        self.__html = self.__html.format(**locals())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
