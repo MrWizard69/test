@@ -58,8 +58,7 @@ class nytView(object):
              self.content += '''
              <div class="wrapper">
              <h1>''' + self.articles[news].title + '''</h1>
-             <img src="''' + self.articles[news].pic + '''" />
-             <p>''' + self.articles[news].abstract + '''</p>
+             <p>''' + self.articles[news].abstract + '''</p><img src="''' + self.articles[news].pic + '''" />
              <a href="''' + self.articles[news].link + '''">Read More...</a>
              </div>
             '''
