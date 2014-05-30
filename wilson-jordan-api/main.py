@@ -58,9 +58,9 @@ class nytView(object):
              self.content += '''
              <div class="wrapper">
              <h1>''' + self.articles[news].title + '''</h1>
+             <img src="''' + self.articles[news].pic + '''" />
              <p>''' + self.articles[news].abstract + '''</p>
              <a href="''' + self.articles[news].link + '''">Read More...</a>
-             <img src="''' + self.articles[news].pic + '''" />
              </div>
             '''
         # self.content = self.content.format(**locals())
