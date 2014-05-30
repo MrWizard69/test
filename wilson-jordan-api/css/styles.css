@@ -10,7 +10,7 @@ body{
 }
 
 img{
-    
+    margin-left: 30%;
 }
 
 h1{
@@ -19,4 +19,8 @@ h1{
 
 p{
     font-size: 1em;
+}
+
+a{
+    margin-right: 30%;
 }
