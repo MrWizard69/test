@@ -1,11 +1,22 @@
 body{
-
+    background-color: DimGray;
+    color: white;
 }
 
 .wrapper{
-
+    border: 3px solid white;
+    border-radius: 3px;
+    margin-bottom: 2%;
 }
 
 img{
+    float: right;
+}
 
+h1{
+    font-size: 2em;
+}
+
+p{
+    
 }
