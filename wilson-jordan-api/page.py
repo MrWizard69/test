@@ -5,7 +5,6 @@ class MainHandler(webapp2.RequestHandler):
         p = FormPage()
         p1 = Page()
         p.form_header = "Enter your name:"
-        p.css_url = "css/styles.css"
         self.response.write(p.print_out())
 
 
@@ -24,16 +23,7 @@ class Page(object):
         self._close = '''
     </body>
 </html>'''
-        self._css_url = ''
         self.all =''
-
-    @property
-    def css_url(self):
-        return self._css_url
-
-    @css_url.setter
-    def css_url(self, c):
-        self._css_url = c
 
     def print_out(self):
         self.update()
