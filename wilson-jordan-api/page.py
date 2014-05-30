@@ -16,7 +16,7 @@ class Page(object):
 <html>
     <head>
         <title>NYT App</title>
-        <link rel="stylesheet" type="text/css" href="{self.css_url}" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
     <body id="wrapper">'''
         self._content = 'This is my content'
