@@ -57,9 +57,8 @@ class nytView(object):
         for news in range(0,20):
              self.content += '''
              <div class="wrapper">
-             <h1>''' + self.articles[news].title + '''</h1>
+             <h1><a href="''' + self.articles[news].link + '''">'''+ self.articles[news].title +'''</a></h1>
              <p>''' + self.articles[news].abstract + '''</p>
-             <a href="''' + self.articles[news].link + '''">Read More...</a>
              <img src="''' + self.articles[news].pic + '''" />
              </div>
             '''
