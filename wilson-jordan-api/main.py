@@ -26,7 +26,6 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         #setting up the basic page
         view = FormPage()
-        view.form_header = "NYT App"
 
 
         #if there are url variables...
@@ -70,11 +69,6 @@ class nytModel(object):
     def __init__(self):
         self.articles = []
         #go get the api info
-        '''
-        Nodes:
-            nested tags (aka tag pairs) -firstChild
-            standalong tag- no firstChild needed
-        '''
 
     def send_req(self):
         url = 'http://api.nytimes.com/svc/news/v3/content/' + self.code + '/all/.xml?api-key=82768f8a5c54cdac403a515021a90c84:10:69415137'

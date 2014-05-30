@@ -4,7 +4,6 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = FormPage()
         p1 = Page()
-        p.form_header = "Enter your name:"
         self.response.write(p.print_out())
 
 
@@ -17,7 +16,9 @@ class Page(object):
         <title>NYT App</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
-    <body id="wrapper">'''
+    <body>
+    <h1>New York Times App</h1>
+    '''
         self._content = 'This is my content'
 
         self._close = '''
@@ -50,7 +51,7 @@ class FormPage(Page):
     <input type="submit" name="submit" />
     '''
         self.__form_close = '</form>'
-        self.form_header = ">>Form Header<<"
+        self.form_header = ""
         self.page_content = ''
         self._content = self.form_header + self.__form_open + self.__inputs + self.__form_close
 

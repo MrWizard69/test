@@ -1,5 +1,5 @@
 body{
-    background-color: DimGray;
+    background-color: #303030;
     color: white;
 }
 
@@ -10,7 +10,7 @@ body{
 }
 
 img{
-    margin-left: 80%;
+    margin-left: 87%;
     width: 10%;
 
 }
@@ -26,5 +26,13 @@ p{
 }
 
 a{
+    color: white;
+}
 
+input{
+
+}
+
+form{
+    margin-left: 43%;
 }
