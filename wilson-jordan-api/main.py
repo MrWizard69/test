@@ -39,19 +39,17 @@ class MainHandler(webapp2.RequestHandler):
             #w_view.wdo = w_model.wdo #transfer wdo from model to view
             w_view.articles = w_model.articles
             w_view.update() #creates html using our wdo data
-            view.page_content = w_view.content #inserting weather view into form view
+            view.page_content = w_view.content #inserting nyt view into form view
 
         self.response.write(view.print_out())
 
-#weatherView
+#nytView
 class nytView(object):
-    ''' This class is showing Just the weather information from the API '''
+    ''' This class is showing Just the information from the API '''
     def __init__(self):
         self.wdo = nytDataObject()
         self.content = ''
 
-        #print self.wdo
-        # print self.wdo.articles
     def update(self):
         for news in range(0,20):
              self.content += '''
@@ -61,8 +59,6 @@ class nytView(object):
              <img src="''' + self.articles[news].pic + '''" />
              </div>
             '''
-        # self.content = self.content.format(**locals())
-        #print self.content
 
 class nytModel(object):
     ''' This class handles data requests and sorting of data from API '''
@@ -79,7 +75,6 @@ class nytModel(object):
         xmldoc = minidom.parse(data)
         #find the tag that we want.. and put that info into the wdo
 
-       # self.__wdo.articles = []
 
         news = xmldoc.getElementsByTagName('news_item')
 
@@ -101,34 +96,7 @@ class nytModel(object):
 
             self.articles.append(article)
 
-        #print self.__wdo.articles[0].firstChild.nodeValue
-        # print self.articles[1]
-        # print self.articles[2]
-
-
-        #
-        # for title in titles:
-        #     self.articles.append(title.firstChild.nodeValue)
-        #
-        # self.abs = []
-        # for abstract in abstracts:
-        #     self.abs.append(abstract.firstChild.nodeValue)
-
-        # self.links = []
-        # for n in news:
-        #     print '------------------------'
-        #     print n.getElementsByTagName('url')[0].firstChild.nodeValue
-        #     print '------------------------'
-
-        # for urls in urlss:
-        #     self.links.append(urls.firstChild.nodeValue)
-
-
-
-
-
-
-    #don't want anyone overwriting my data object... so I'm making a property with jus a getter.
+    #don't want anyone overwriting my data object... so I'm making a property with just a getter.
     @property
     def wdo(self):
         return self.__wdo
