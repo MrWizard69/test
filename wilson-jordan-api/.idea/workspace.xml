@@ -34,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="styles.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="19" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="12" column="4" selection-start="156" selection-end="156" vertical-scroll-proportion="0.23591088" vertical-offset="0" max-vertical-offset="763">
               <folding />
             </state>
           </provider>
@@ -47,15 +47,6 @@
         <entry file="file://$PROJECT_DIR$/page.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="25" column="20" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="990">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.yaml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="2" selection-start="120" selection-end="120" vertical-scroll-proportion="0.17693315" vertical-offset="0" max-vertical-offset="763">
               <folding />
             </state>
           </provider>
@@ -72,9 +63,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/page.py" />
         <option value="$PROJECT_DIR$/app.yaml" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
       </list>
     </option>
   </component>
@@ -394,9 +385,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
+    <entry file="file://$PROJECT_DIR$/app.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="19" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+        <state line="9" column="2" selection-start="120" selection-end="120" vertical-scroll-proportion="0.17693315" vertical-offset="0" max-vertical-offset="763">
           <folding />
         </state>
       </provider>
@@ -408,9 +399,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.yaml">
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="2" selection-start="120" selection-end="120" vertical-scroll-proportion="0.17693315" vertical-offset="0" max-vertical-offset="763">
+        <state line="12" column="4" selection-start="156" selection-end="156" vertical-scroll-proportion="0.23591088" vertical-offset="0" max-vertical-offset="763">
           <folding />
         </state>
       </provider>
