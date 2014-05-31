@@ -28,9 +28,9 @@ class MainHandler(webapp2.RequestHandler):
             code = self.request.GET['code']
             w_model = Model()
             w_model.code = self.request.GET['code']
-            w_model.send_req()
+            #w_model.send_req()
             w_view = View()
-            w_view.wdo = w_model.wdo
+            #w_view.wdo = w_model.wdo
             w_view.update()
             view.page_content = w_view.content
 
