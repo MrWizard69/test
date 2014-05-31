@@ -41,7 +41,7 @@ class View(object):
         wdo = DataObject()
         self.content = ''
 
-    def update(self):
+    def update(self): #where the information will be displayed
         self.content = '''
         <h1>{self.wdo.name}</h1>
         <p>{self.wdo.sigil}</p>
@@ -49,7 +49,7 @@ class View(object):
 
         self.content = self.content.format(**locals())
 
-class Model(object):
+class Model(object): #where the information is gathered
     def __init__(self):
         self.url = 'http://rebeccacarroll.com/api/got/got.xml'
         self.full_url = self.url + self.__code
