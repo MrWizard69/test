@@ -15,10 +15,13 @@
 # limitations under the License.
 #
 import webapp2
+from page import FormPage
+from xml.dom import minidom
+import urllib2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
