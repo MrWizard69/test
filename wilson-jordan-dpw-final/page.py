@@ -39,3 +39,7 @@ class FormPage(Page):
         self.page_content = ''
         self._content = self.form_header + self.__form_open +self.__inputs + self.__form_close
 
+    def update(self):
+        self.all = self.open +self.form_header + self.__form_open + self.__inputs + self.__form_close + self.page_content + self._close
+        self.all = self.all.format(**locals())
+
