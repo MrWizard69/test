@@ -43,9 +43,9 @@ class View(object):
 
     def update(self):
         self.content = '''
-        <h1>{self.wdo.}</h1>
-        <p>{self.wdo.}</p>
-        <p>{self.wdo.}</p>'''
+        <h1>{self.wdo.name}</h1>
+        <p>{self.wdo.sigil}</p>
+        <p>{self.wdo.motto}</p>'''
 
         self.content = self.content.format(**locals())
 
