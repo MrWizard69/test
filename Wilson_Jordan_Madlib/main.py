@@ -3,7 +3,7 @@
 #Madlib
 
 noun = raw_input("Enter a noun: ") #a variable that stores user input
-verb = raw_input("Enter a verb: ")
+verb = raw_input("Enter a verb: ") #a variable that stores user input
 num1 = raw_input("Enter a number between 1-7: ")
 if int(num1) > 7 or int(num1) < 1:
     print "Your number is not within the proper range"
