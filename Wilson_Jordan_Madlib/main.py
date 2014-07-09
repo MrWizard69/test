@@ -15,14 +15,15 @@ people = ['Jordan', 'Andrew', 'Kyle', 'Blair', 'Justin', 'Forrest', 'Missy'] #my
 def enemy_calc(p1,p2):
     r = int(num2) / int(num1) + p1 + p2
     return r
-result = enemy_calc(int(num1), int(num2))
+result = enemy_calc(int(num1), int(num2)) #my function
 #print result
 
 
 
-wizard = {"name":"Mr.Wizard", "age":"33", "occupation":"Wizard"}
+wizard = {"name":"Mr.Wizard", "age":"33", "occupation":"Wizard"} #my dictionary
 #print wizard["name"]
 
+#the epic story...
 print wizard["name"] + " has his back up against the wall against his rival RL!"
 raw_input()
 print wizard["name"] + "'s wand broke. He reached into his robe and out of desparation, he pulled out a " + noun + "!"
