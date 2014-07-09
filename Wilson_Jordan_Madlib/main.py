@@ -2,7 +2,7 @@
 #07/08/14
 #Madlib
 
-noun = raw_input("Enter a noun: ")
+noun = raw_input("Enter a noun: ") #a variable that stores user input
 verb = raw_input("Enter a verb: ")
 num1 = raw_input("Enter a number between 1-7: ")
 if int(num1) > 7 or int(num1) < 1:
