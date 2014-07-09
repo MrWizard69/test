@@ -7,7 +7,7 @@ verb = raw_input("Enter a verb: ") #a variable that stores user input
 num1 = raw_input("Enter a number between 1-7: ") #a variable that stores user input
 if int(num1) > 7 or int(num1) < 1:
     print "Your number is not within the proper range"
-    num1 = input("Enter a number between 1-7: ")
+    num1 = input("Enter a number between 1-7: ") #my conditional statement
 
 num2 = raw_input("Enter another number: ")
 people = ['Jordan', 'Andrew', 'Kyle', 'Blair', 'Justin', 'Forrest', 'Missy']
