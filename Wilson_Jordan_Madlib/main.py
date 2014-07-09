@@ -10,7 +10,7 @@ if int(num1) > 7 or int(num1) < 1:
     num1 = input("Enter a number between 1-7: ") #my conditional statement
 
 num2 = raw_input("Enter another number: ") #a variable that stores user input
-people = ['Jordan', 'Andrew', 'Kyle', 'Blair', 'Justin', 'Forrest', 'Missy']
+people = ['Jordan', 'Andrew', 'Kyle', 'Blair', 'Justin', 'Forrest', 'Missy'] #my array of names
 
 def enemy_calc(p1,p2):
     r = int(num2) / int(num1) + p1 + p2
