@@ -9,7 +9,7 @@ if int(num1) > 7 or int(num1) < 1:
     print "Your number is not within the proper range"
     num1 = input("Enter a number between 1-7: ") #my conditional statement
 
-num2 = raw_input("Enter another number: ")
+num2 = raw_input("Enter another number: ") #a variable that stores user input
 people = ['Jordan', 'Andrew', 'Kyle', 'Blair', 'Justin', 'Forrest', 'Missy']
 
 def enemy_calc(p1,p2):
