@@ -1,5 +1,5 @@
-width = raw_input('Enter the width')
-height = raw_input('Enter the height')
+width = raw_input('Enter the width: ')
+height = raw_input('Enter the height: ')
 
 def calc_area(p1,p2):
     area = p1 * p2
@@ -8,3 +8,7 @@ def calc_area(p1,p2):
     else:
         print 'It is a rectangle!'
     return area
+
+print calc_area(int(width),int(height))
+
+
