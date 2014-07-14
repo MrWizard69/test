@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="71" selection-start="522" selection-end="522" vertical-scroll-proportion="0.3119266" vertical-offset="2" max-vertical-offset="765">
+            <state line="16" column="71" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.yaml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="17" selection-start="139" selection-end="139" vertical-scroll-proportion="0.15727392" vertical-offset="0" max-vertical-offset="763">
               <folding />
             </state>
           </provider>
@@ -52,8 +61,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/app.yaml" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/app.yaml" />
       </list>
     </option>
   </component>
@@ -302,13 +311,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="17" selection-start="143" selection-end="143" vertical-scroll-proportion="0.15727392" vertical-offset="0" max-vertical-offset="763">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="1" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
@@ -318,7 +320,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="71" selection-start="522" selection-end="522" vertical-scroll-proportion="0.3119266" vertical-offset="2" max-vertical-offset="765">
+        <state line="16" column="71" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="17" selection-start="139" selection-end="139" vertical-scroll-proportion="0.15727392" vertical-offset="0" max-vertical-offset="763">
           <folding />
         </state>
       </provider>
