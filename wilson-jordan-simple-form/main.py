@@ -23,7 +23,7 @@ class Page(object):
     form_content = '''
         <h1>Welcome to Play-Free-Web-Games! :D</h1>
         <h3>Sign Up</h3>
-        <p></p>
+        <p>Please fill out this form to start playing for free!</p>
         <form method="GET">
             <input type="text" placeholder="First Name" name="fname" />
             <input type="text" placeholder="Last Name" name="lname" />
