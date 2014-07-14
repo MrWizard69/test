@@ -4,8 +4,9 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
         if self.request.GET:
-            p.content = "First Name: " + self.request.GET['fname']
-            p.content += "<br /> Last Name: " + self.request.GET['lname']
+            p.content = "<p>Please keep this information for safe keeping.</p>"
+            p.content += "<p>First Name: " + self.request.GET['fname'] + "</p>"
+            p.content += "<br /><p> Last Name: " + self.request.GET['lname'] + "</p>"
             self.response.write(p.print_out_page())
         else:
             self.response.write(p.print_out_form())
@@ -21,7 +22,7 @@ class Page(object):
     <nav id="nav"><ul>
 		<li>| <a href="#">Games</a></li>
 		<li>| <a href="#">Login</a> |</li>
-		<li class="select"><a href="#">Sign Up</a>| </li>
+		<li class="select"><a href="http://localhost:9080/">Sign Up</a>| </li>
 	</ul></nav>
     '''
     content = '''Hello there'''
