@@ -18,6 +18,11 @@ class Page(object):
         <title>New Page</title>
     </head>
     <body>
+    <nav id="nav"><ul>
+		<li>| <a href="#">Games</a></li>
+		<li>| <a href="#">Login</a> |</li>
+		<li class="select"><a href="#">Sign Up</a>| </li>
+	</ul></nav>
     '''
     content = '''Hello there'''
     form_content = '''
