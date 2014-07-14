@@ -15,7 +15,7 @@ class Page(object):
 <html>
     <head>
         <link rel="stylesheet" href="css/styles.css" type="text/css" />
-        <title>Welcome to My Page</title>
+        <title>New Page</title>
     </head>
     <body>
     '''
