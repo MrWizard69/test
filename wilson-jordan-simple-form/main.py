@@ -6,7 +6,7 @@ class MainHandler(webapp2.RequestHandler):
         if self.request.GET:
             p.content = "<p>Please keep this information for safe keeping.</p>"
             p.content += "<p>First Name: " + self.request.GET['fname'] + "</p>"
-            p.content += "<br /><p> Last Name: " + self.request.GET['lname'] + "</p>"
+            p.content += "<p> Last Name: " + self.request.GET['lname'] + "</p>"
             self.response.write(p.print_out_page())
         else:
             self.response.write(p.print_out_form())
