@@ -5,8 +5,9 @@ class MainHandler(webapp2.RequestHandler):
         p = Page()
         if self.request.GET:
             p.content = "<p>Please keep this information for safe keeping.</p>"
-            p.content += "<p>First Name: " + self.request.GET['fname'] + "</p>"
-            p.content += "<p> Last Name: " + self.request.GET['lname'] + "</p>"
+            p.content += "<p>Full Name: " + self.request.GET['flname'] + "</p>"
+            p.content += "<p>Username: " + self.request.GET['user'] + "</p>"
+            p.content += "<p>Password: " + self.request.GET['pass'] + "</p>"
             self.response.write(p.print_out_page())
         else:
             self.response.write(p.print_out_form())
@@ -31,8 +32,9 @@ class Page(object):
         <h3>Sign Up</h3>
         <p>Please fill out this form to start playing for free!</p>
         <form method="GET">
-            <input type="text" placeholder="First Name" name="fname" />
-            <input type="text" placeholder="Last Name" name="lname" />
+            <input type="text" placeholder="Full Name" name="flname" />
+            <input type="text" placeholder="Username" name="user" />
+            <input type="text" placeholder="Password" name="pass" />
             <input type="submit" value="Submit Info" />
         </form>
     '''
