@@ -35,6 +35,9 @@ class Page(object):
             <input type="text" placeholder="Full Name" name="flname" />
             <input type="text" placeholder="Username" name="user" />
             <input type="text" placeholder="Password" name="pass" />
+            <p>Are you a Male?</p>
+             <input type="checkbox" name="gender" value="yes" /> Yes
+             <input type="checkbox" name="gender" value="No" /> No
             <input type="submit" value="Submit Info" />
         </form>
     '''
