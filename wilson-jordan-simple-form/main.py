@@ -21,6 +21,9 @@ class Page(object):
     '''
     content = '''Hello there'''
     form_content = '''
+        <h1>Welcome to Play-Free-Web-Games! :D</h1>
+        <h3>Sign Up</h3>
+        <p></p>
         <form method="GET">
             <input type="text" placeholder="First Name" name="fname" />
             <input type="text" placeholder="Last Name" name="lname" />
@@ -30,9 +33,6 @@ class Page(object):
     closer = '''
     </body>
     </html>'''
-
-    def __init__(self):
-        pass
 
     def print_out_page(self):
         return self.header + self.content + self.closer
