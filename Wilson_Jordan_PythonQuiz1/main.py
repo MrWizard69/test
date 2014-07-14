@@ -17,4 +17,4 @@ def count_down(booze):
         print str(i) + ' bottles of beer on the wall' #number of beer
         print 'take one down pass it around, now you have ' + str(i - 1) + ' bottles of beeeeeer!' #number of beer - 1
 
-print count_down(booze) #printing out the loop
+print count_down(booze) #prints out the loop
