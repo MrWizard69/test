@@ -44,6 +44,33 @@ class MainHandler(webapp2.RequestHandler):
         self.grand.synops = "Grand Theft Auto V takes place in a re-imagined, present-day Southern California in the " \
                             "largest and most thriving game-world."
 
+        games = [self.fifa, self.destiny, self.titan, self.minecraft, self.grand]
+
+        if self.request.GET:
+            game = self.request.GET['game']
+
+            title = games[game].title
+            price = games[game].price
+            rating = games[game].rating
+            genre = games[game].genre
+            synops = games[game].synops
+
+            game_info = '''
+                <div>
+                    <p>{title}</p>
+                    <p>{price}</p>
+                    <p>{rating}</p>
+                    <p>{genre}</p>
+                    <p>{synops}</p>
+                </div>
+            '''
+
+            all_games = game_info.format(**locals())
+
+            self.response.write(all_games)
+
+        self.response.write(p.print_out())
+
 
 
 class Games(object):
