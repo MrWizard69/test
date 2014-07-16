@@ -13,6 +13,15 @@ class MainHandler(webapp2.RequestHandler):
         self.fifa.synops = "An all-new feature and one of 100 new animations, Over-the-Back Headers give players the " \
                            "ability to jump over top of the opposition to win the ball."
 
+        self.destiny = Games()
+        self.destiny.title = "Destiny"
+        self.destiny.price = 59.99
+        self.destiny.rating = "Not Rated"
+        self.destiny.genre = "Shooter"
+        self.destiny.synops = "Destiny is an action game from the creators of Halo, set in a mysterious future."
+
+        
+
 class Games(object):
     def __init__(self):
         self.__title = ""
