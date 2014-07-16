@@ -5,6 +5,8 @@ class MainHandler(webapp2.RequestHandler):
         p = Page()
         if self.request.GET: #this is where the info from the input boxes are called
             p.content = "<h1>Thank You For Signing Up!</h1>"
+            # if self.request.GET.has_key[news]
+            #     self.request.GET['news'] = 'No'
             p.content += "<div class='form'>"
             p.content += "<p>Please keep this information for safe keeping.</p>"
             p.content += "<p>Full Name: " + self.request.GET['flname'] + "</p>"
@@ -12,7 +14,9 @@ class MainHandler(webapp2.RequestHandler):
             p.content += "<p>Username: " + self.request.GET['user'] + "</p>"
             p.content += "<p>Password: " + self.request.GET['pass'] + "</p>"
             p.content += "<p>Your Favorite Console: " + self.request.GET['console'] + "</p>"
+            #p.content += "<p>News?: " + self.request.GET['news'] + "</p>"
             p.content += "</div>"
+
             self.response.write(p.print_out_page())
         else:
             self.response.write(p.print_out_form()) #if not, then go to the form page
