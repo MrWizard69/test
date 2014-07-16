@@ -22,6 +22,8 @@ class MainHandler(webapp2.RequestHandler):
 
         
 
+
+
 class Games(object):
     def __init__(self):
         self.__title = ""
