@@ -28,6 +28,13 @@ class MainHandler(webapp2.RequestHandler):
         self.titan.synops = "Crafted by one of the co-creators of Call of Duty and other key developers behind the " \
                             "Call of Duty franchise."
 
+        self.minecraft = Games()
+        self.minecraft.title = "Minecraft"
+        self.minecraft.price = 19.96
+        self.minecraft.rating = "Rated E"
+        self.minecraft.genre = "Adventure"
+        self.minecraft.synops = "Minecraft is a game about breaking and placing blocks."
+
 
 
 class Games(object):
