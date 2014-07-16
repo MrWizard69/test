@@ -21,6 +21,22 @@ class Games(object):
     def title(self, new):
         self.__title = new
 
+    @property
+    def price(self):
+        return self.__price
+
+    @price.setter
+    def price(self, money):
+        self.__price = money
+
+    @property
+    def rating(self):
+        return self.__rating
+
+    @rating.setter
+    def rating(self, e):
+        self.__rating = e
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
