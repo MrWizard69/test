@@ -4,7 +4,7 @@ from page import Page
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
-        self.response.write(p.print_out())
+        #self.response.write(p.print_out())
 
         self.fifa = Games()
         self.fifa.title = "FIFA World Cup Brazil 2014"
