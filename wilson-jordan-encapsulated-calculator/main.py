@@ -20,7 +20,13 @@ class MainHandler(webapp2.RequestHandler):
         self.destiny.genre = "Shooter"
         self.destiny.synops = "Destiny is an action game from the creators of Halo, set in a mysterious future."
 
-        
+        self.titan = Games()
+        self.titan.title = "Titanfall"
+        self.titan.price = 49.80
+        self.titan.rating = "Not Rated"
+        self.titan.genre = "Shooter"
+        self.titan.synops = "Crafted by one of the co-creators of Call of Duty and other key developers behind the " \
+                            "Call of Duty franchise."
 
 
 
