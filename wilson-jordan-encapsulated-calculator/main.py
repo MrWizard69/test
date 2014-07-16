@@ -47,7 +47,7 @@ class MainHandler(webapp2.RequestHandler):
         games = [self.fifa, self.destiny, self.titan, self.minecraft, self.grand]
 
         if self.request.GET:
-            game = self.request.GET['game']
+            game = int(self.request.GET['game'])
 
             title = games[game].title
             price = games[game].price
@@ -120,6 +120,12 @@ class Games(object):
     @synops.setter
     def synops(self, s):
         self.__synops = s
+
+    def calc_all_games(self):
+        total = self.__price / 3.14
+
+    
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
