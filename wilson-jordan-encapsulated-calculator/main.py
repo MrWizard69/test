@@ -5,6 +5,14 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
 
+        self.fifa = Games()
+        self.fifa.title = "FIFA World Cup Brazil 2014"
+        self.fifa.price = 39.88
+        self.fifa.rating = "Rated E"
+        self.fifa.genre = "Sports"
+        self.fifa.synops = "An all-new feature and one of 100 new animations, Over-the-Back Headers give players the " \
+                           "ability to jump over top of the opposition to win the ball."
+
 class Games(object):
     def __init__(self):
         self.__title = ""
