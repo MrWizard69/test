@@ -13,6 +13,14 @@ class Games(object):
         self.__genre = ""
         self.__synops = ""
 
+    @property
+    def title(self):
+        return self.__title
+
+    @title.setter
+    def title(self, new):
+        self.__title = new
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
