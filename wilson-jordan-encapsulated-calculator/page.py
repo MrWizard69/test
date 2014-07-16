@@ -9,7 +9,15 @@ class Page():
     <body>
         '''
         self.content = '''
-            Content
+            <div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
             '''
         self.closer = '''
     </body>
