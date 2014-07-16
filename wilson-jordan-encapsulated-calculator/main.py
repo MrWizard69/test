@@ -37,6 +37,16 @@ class Games(object):
     def rating(self, e):
         self.__rating = e
 
+    @property
+    def genre(self):
+        return self.__genre
+
+    @genre.setter
+    def genre(self, g):
+        self.__genre = g
+
+    
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
 ], debug=True)
