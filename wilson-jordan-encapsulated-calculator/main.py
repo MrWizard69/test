@@ -4,6 +4,7 @@ from page import Page
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
+        self.response.write(p.print_out())
 
         self.fifa = Games()
         self.fifa.title = "FIFA World Cup Brazil 2014"
@@ -34,6 +35,14 @@ class MainHandler(webapp2.RequestHandler):
         self.minecraft.rating = "Rated E"
         self.minecraft.genre = "Adventure"
         self.minecraft.synops = "Minecraft is a game about breaking and placing blocks."
+
+        self.grand = Games()
+        self.grand.title = "Grand Theft Auto V"
+        self.grand.price = 32.99
+        self.grand.rating = "Rated M"
+        self.grand.genre = " Action / Adventure "
+        self.grand.synops = "Grand Theft Auto V takes place in a re-imagined, present-day Southern California in the " \
+                            "largest and most thriving game-world."
 
 
 
