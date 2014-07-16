@@ -1,6 +1,6 @@
 class Page():
     def __init__(self):
-        self.open = '''
+        self.header = '''
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,7 +11,10 @@ class Page():
         self.content = '''
             Content
             '''
-        self.close = '''
+        self.closer = '''
     </body>
 </html>
         '''
+
+    def print_out(self):
+        return self.header + self.content + self.closer
