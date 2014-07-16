@@ -13,6 +13,7 @@ class MainHandler(webapp2.RequestHandler):
         self.fifa.genre = "Sports"
         self.fifa.synops = "An all-new feature and one of 100 new animations, Over-the-Back Headers give players the " \
                            "ability to jump over top of the opposition to win the ball."
+        self.fifa.calc_all_games_pi()
 
         self.destiny = Games()
         self.destiny.title = "Destiny"
@@ -20,6 +21,7 @@ class MainHandler(webapp2.RequestHandler):
         self.destiny.rating = "Not Rated"
         self.destiny.genre = "Shooter"
         self.destiny.synops = "Destiny is an action game from the creators of Halo, set in a mysterious future."
+        self.destiny.calc_all_games_pi()
 
         self.titan = Games()
         self.titan.title = "Titanfall"
@@ -28,6 +30,7 @@ class MainHandler(webapp2.RequestHandler):
         self.titan.genre = "Shooter"
         self.titan.synops = "Crafted by one of the co-creators of Call of Duty and other key developers behind the " \
                             "Call of Duty franchise."
+        self.titan.calc_all_games_pi()
 
         self.minecraft = Games()
         self.minecraft.title = "Minecraft"
@@ -35,6 +38,7 @@ class MainHandler(webapp2.RequestHandler):
         self.minecraft.rating = "Rated E"
         self.minecraft.genre = "Adventure"
         self.minecraft.synops = "Minecraft is a game about breaking and placing blocks."
+        self.minecraft.calc_all_games_pi()
 
         self.grand = Games()
         self.grand.title = "Grand Theft Auto V"
@@ -43,6 +47,7 @@ class MainHandler(webapp2.RequestHandler):
         self.grand.genre = " Action / Adventure "
         self.grand.synops = "Grand Theft Auto V takes place in a re-imagined, present-day Southern California in the " \
                             "largest and most thriving game-world."
+        self.grand.calc_all_games_pi()
 
         games = [self.fifa, self.destiny, self.titan, self.minecraft, self.grand]
 
@@ -54,6 +59,7 @@ class MainHandler(webapp2.RequestHandler):
             rating = games[game].rating
             genre = games[game].genre
             synops = games[game].synops
+            pi_games = games[game].pi_games
 
             game_info = '''
                 <div>
@@ -62,6 +68,7 @@ class MainHandler(webapp2.RequestHandler):
                     <p>{rating}</p>
                     <p>{genre}</p>
                     <p>{synops}</p>
+                    <p>{pi_games}</p>
                 </div>
             '''
 
@@ -121,10 +128,15 @@ class Games(object):
     def synops(self, s):
         self.__synops = s
 
-    def calc_all_games(self):
-        total = self.__price / 3.14
+    @property
+    def pi_games(self):
+        return self.__pi_games
 
-    
+    def calc_all_games_pi(self):
+        total = self.__price / 3.14
+        self.__pi_games = total
+
+
 
 
 app = webapp2.WSGIApplication([
