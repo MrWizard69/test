@@ -45,7 +45,13 @@ class Games(object):
     def genre(self, g):
         self.__genre = g
 
-    
+    @property
+    def synops(self):
+        return self.__synops
+
+    @synops.setter
+    def synops(self, s):
+        self.__synops = s
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
