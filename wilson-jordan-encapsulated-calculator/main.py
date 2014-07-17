@@ -4,56 +4,57 @@ from page import Page
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
-        #self.response.write(p.print_out())
+        self.response.write(p.print_out()) #display the page
 
-        self.fifa = Games()
+        self.fifa = Games() #fifa game
         self.fifa.title = "FIFA World Cup Brazil 2014"
         self.fifa.price = 39.88
-        self.fifa.rating = "Rated E"
+        self.fifa.rating = "E"
         self.fifa.genre = "Sports"
         self.fifa.synops = "An all-new feature and one of 100 new animations, Over-the-Back Headers give players the " \
                            "ability to jump over top of the opposition to win the ball."
-        self.fifa.calc_all_games_pi()
+        self.fifa.calc_all_games_pi() #calculates the price / pi
 
-        self.destiny = Games()
+        self.destiny = Games() #destiny game
         self.destiny.title = "Destiny"
         self.destiny.price = 59.99
         self.destiny.rating = "Not Rated"
         self.destiny.genre = "Shooter"
         self.destiny.synops = "Destiny is an action game from the creators of Halo, set in a mysterious future."
-        self.destiny.calc_all_games_pi()
+        self.destiny.calc_all_games_pi() #calculates the price / pi
 
-        self.titan = Games()
+        self.titan = Games() #titanfall game
         self.titan.title = "Titanfall"
-        self.titan.price = 49.80
+        self.titan.price = 49.81
         self.titan.rating = "Not Rated"
         self.titan.genre = "Shooter"
         self.titan.synops = "Crafted by one of the co-creators of Call of Duty and other key developers behind the " \
                             "Call of Duty franchise."
-        self.titan.calc_all_games_pi()
+        self.titan.calc_all_games_pi() #calculates the price / pi
 
-        self.minecraft = Games()
+        self.minecraft = Games() #minecraft game
         self.minecraft.title = "Minecraft"
         self.minecraft.price = 19.96
-        self.minecraft.rating = "Rated E"
+        self.minecraft.rating = "E"
         self.minecraft.genre = "Adventure"
         self.minecraft.synops = "Minecraft is a game about breaking and placing blocks."
-        self.minecraft.calc_all_games_pi()
+        self.minecraft.calc_all_games_pi() #calculates the price / pi
 
-        self.grand = Games()
+        self.grand = Games() #grand theft auto game
         self.grand.title = "Grand Theft Auto V"
         self.grand.price = 32.99
-        self.grand.rating = "Rated M"
+        self.grand.rating = "M"
         self.grand.genre = " Action / Adventure "
         self.grand.synops = "Grand Theft Auto V takes place in a re-imagined, present-day Southern California in the " \
                             "largest and most thriving game-world."
-        self.grand.calc_all_games_pi()
+        self.grand.calc_all_games_pi() #calculates the price / pi
 
-        games = [self.fifa, self.destiny, self.titan, self.minecraft, self.grand]
+        games = [self.fifa, self.destiny, self.titan, self.minecraft, self.grand] #an array to hold all the info
 
         if self.request.GET:
             game = int(self.request.GET['game'])
 
+            #making variables to hold specific values of each game
             title = games[game].title
             price = games[game].price
             rating = games[game].rating
@@ -61,26 +62,28 @@ class MainHandler(webapp2.RequestHandler):
             synops = games[game].synops
             pi_games = games[game].pi_games
 
+            #below is where all the variables are being displayed
             game_info = '''
-                <div>
-                    <p>{title}</p>
-                    <p>{price}</p>
-                    <p>{rating}</p>
-                    <p>{genre}</p>
-                    <p>{synops}</p>
-                    <p>{pi_games}</p>
+                <div class="form">
+                    <p>Title: {title}</p>
+                    <p>Price: {price}</p>
+                    <p>Rating: {rating}</p>
+                    <p>Genre: {genre}</p>
+                    <p>Synopsis: {synops}</p>
+                    <p>The price / pi: {pi_games}...</p>
                 </div>
             '''
 
             all_games = game_info.format(**locals())
 
-            self.response.write(all_games)
 
-        self.response.write(p.print_out())
+            self.response.write(all_games) #display the game information
+
+        #self.response.write(p.print_out())
 
 
 
-class Games(object):
+class Games(object): #this is my constructor
     def __init__(self):
         self.__title = ""
         self.__price = 0
@@ -88,6 +91,7 @@ class Games(object):
         self.__genre = ""
         self.__synops = ""
 
+    #below is a bunch of getters and setters
     @property
     def title(self):
         return self.__title
@@ -132,7 +136,7 @@ class Games(object):
     def pi_games(self):
         return self.__pi_games
 
-    def calc_all_games_pi(self):
+    def calc_all_games_pi(self): #this is where the price is calced with pi
         total = self.__price / 3.14
         self.__pi_games = total
 
