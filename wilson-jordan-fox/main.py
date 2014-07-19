@@ -63,7 +63,13 @@ class Duck(AbstractWildLife):
         self.phylum = 'Chordata'
         self.order = 'Anseriformes'
         self.w_class = 'Aves'
-        self.family = ''
+        self.family = 'Anatide'
+        self.genus = 'Duck'
+        self.url = 'http://upload.wikimedia.org/wikipedia/commons/5/51/Mandarin.duck.arp.jpg' #wiki commons
+        self.lifespan = ' 4 - 8 years'
+        self.habitat = 'Rivers, lakes and woodland wetlands'
+        self.geo = 'At a pond near you'
+        self.sound = 'QUACK QUACK QUACK'
 
 
 
