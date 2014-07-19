@@ -45,8 +45,9 @@ class Cow(AbstractWildLife):
     def __init__(self):
         super(Cow,self).__init__()
         self.name = 'Cow'
-        self.phylum = 'Mammalia'
+        self.phylum = 'Chordata'
         self.order = 'Artiodactyla'
+        self.w_class = 'Mammalia'
         self.family = 'Bovidae'
         self.genus = 'Bos Taurus'
         self.url = 'http://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg' #wiki commons
@@ -59,6 +60,10 @@ class Duck(AbstractWildLife):
     def __init__(self):
         super(Duck,self).__init__()
         self.name = 'Duck'
+        self.phylum = 'Chordata'
+        self.order = 'Anseriformes'
+        self.w_class = 'Aves'
+        self.family = ''
 
 
 
