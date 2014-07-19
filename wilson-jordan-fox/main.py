@@ -71,6 +71,21 @@ class Duck(AbstractWildLife):
         self.geo = 'At a pond near you'
         self.sound = 'QUACK QUACK QUACK'
 
+class Fox(AbstractWildLife):
+    def __init__(self):
+        super(Fox,self).__init__()
+        self.name = 'Fox'
+        self.phylum = 'Chordata'
+        self.w_class = 'Mammalia'
+        self.order = 'Carnivora'
+        self.family = 'Canidae'
+        self.genus = 'Canis'
+        self.url = 'http://upload.wikimedia.org/wikipedia/commons/d/df/Fox_study_6.jpg' #wiki commons
+        self.lifespan = '5 years'
+        self.habitat = 'The northern hemisphere from the Arctic Circle to North Africa, and Central America.'
+        self.geo = 'Everywhere'
+        self.sound = 'Ring-ding-ding-ding-dingeringeding!'
+
 
 
 app = webapp2.WSGIApplication([
