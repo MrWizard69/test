@@ -53,6 +53,12 @@ class Cow(AbstractWildLife):
         self.lifespan = '15 years'
         self.habitat = 'Grasslands and Forests'
         self.geo = 'On farms everywhere'
+        self.sound = 'MEROOOOO'
+
+class Duck(AbstractWildLife):
+    def __init__(self):
+        super(Duck,self).__init__()
+        self.name = 'Duck'
 
 
 
