@@ -27,6 +27,21 @@ class Page(object):
     def print_out(self):
         return self.header + self.content + self.closer
 
+class AbstractWildLife(object):
+    def __init__(self):
+        self.name = ''
+        self.phylum = ''
+        self.w_class = ''
+        self.order = ''
+        self.family = ''
+        self.genus = ''
+        self.url = ''
+        self.lifespan = ''
+        self.habitat = ''
+        self.geo = ''
+        self.sound = ''
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
