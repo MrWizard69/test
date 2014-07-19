@@ -41,6 +41,19 @@ class AbstractWildLife(object):
         self.geo = ''
         self.sound = ''
 
+class Cow(AbstractWildLife):
+    def __init__(self):
+        super(Cow,self).__init__()
+        self.name = 'Cow'
+        self.phylum = 'Mammalia'
+        self.order = 'Artiodactyla'
+        self.family = 'Bovidae'
+        self.genus = 'Bos Taurus'
+        self.url = 'http://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg' #wiki commons
+        self.lifespan = '15 years'
+        self.habitat = 'Grasslands and Forests'
+        self.geo = 'On farms everywhere'
+
 
 
 app = webapp2.WSGIApplication([
