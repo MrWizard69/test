@@ -2,7 +2,12 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        p = Page()
+        cow = Cow()
+        duck = Duck()
+        fox = Fox()
+        wildlife = [cow, duck, fox]
+        self.response.write(p.print_out())
 
 
 class Page(object):
