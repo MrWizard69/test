@@ -9,6 +9,38 @@ class MainHandler(webapp2.RequestHandler):
         wildlife = [cow, duck, fox]
         self.response.write(p.print_out())
 
+        if self.request.GET:
+            animal = int(self.request.GET['wildlife'])
+
+            name = wildlife[animal].name
+            phylum = wildlife[animal].phylum
+            w_class = wildlife[animal].w_class
+            order = wildlife[animal].order
+            family = wildlife[animal].family
+            genus = wildlife[animal].genus
+            url = wildlife[animal].url
+            lifespan = wildlife[animal].lifespan
+            habitat = wildlife[animal].habitat
+            geo = wildlife[animal].geo
+            sound = wildlife[animal].sound
+
+            output = '''
+            <div>
+                <h1>{name}</h1>
+                <img src="{url}" alt="{name}" />
+                <p>Phylum: {phylum}</p>
+                <p>Class: {w_class}</p>
+                <p>Order: {order}</p>
+                <p>Family: {family}</p>
+                <p>Genus: {genus}</p>
+                <p>Lifespan: {lifespan}</p>
+                <p>Habitat: {habitat}</p>
+                <p>Geolocation: {geo}</p>
+                <p>Sound: {sound}</p>
+            </div>'''
+            result = output.format(**locals())
+            self.response.write(result)
+
 
 class Page(object):
     def __init__(self):
@@ -21,9 +53,10 @@ class Page(object):
             <body>'''
         self.content = '''
         <ul>
-            <li><a href="wildlife=0">Cow</a></li>
-            <li><a href="wildlife=1">Duck</a></li>
-            <li><a href="wildlife=2">Fox</a></li>
+            <li><a href="?wildlife=0">Cow</a></li>
+            <li><a href="?wildlife=1">Duck</a></li>
+            <li><a href="?wildlife=2">Fox</a></li>
+            <li><a href="http://localhost:13080/">Refresh</a></li>
         </ul>'''
         self.closer = '''
         </body>
@@ -71,7 +104,7 @@ class Duck(AbstractWildLife):
         self.family = 'Anatide'
         self.genus = 'Duck'
         self.url = 'images/duck.jpg' #wiki commons
-        self.lifespan = ' 4 - 8 years'
+        self.lifespan = '4 - 8 years'
         self.habitat = 'Rivers, lakes and woodland wetlands'
         self.geo = 'At a pond near you'
         self.sound = 'QUACK QUACK QUACK'
