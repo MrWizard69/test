@@ -50,7 +50,7 @@ class Cow(AbstractWildLife):
         self.w_class = 'Mammalia'
         self.family = 'Bovidae'
         self.genus = 'Bos Taurus'
-        self.url = 'http://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg' #wiki commons
+        self.url = 'images/cow.jpg' #wiki commons
         self.lifespan = '15 years'
         self.habitat = 'Grasslands and Forests'
         self.geo = 'On farms everywhere'
@@ -65,7 +65,7 @@ class Duck(AbstractWildLife):
         self.w_class = 'Aves'
         self.family = 'Anatide'
         self.genus = 'Duck'
-        self.url = 'http://upload.wikimedia.org/wikipedia/commons/5/51/Mandarin.duck.arp.jpg' #wiki commons
+        self.url = 'images/duck.jpg' #wiki commons
         self.lifespan = ' 4 - 8 years'
         self.habitat = 'Rivers, lakes and woodland wetlands'
         self.geo = 'At a pond near you'
@@ -80,7 +80,7 @@ class Fox(AbstractWildLife):
         self.order = 'Carnivora'
         self.family = 'Canidae'
         self.genus = 'Canis'
-        self.url = 'http://upload.wikimedia.org/wikipedia/commons/d/df/Fox_study_6.jpg' #wiki commons
+        self.url = 'images/fox.jpg' #wiki commons
         self.lifespan = '5 years'
         self.habitat = 'The northern hemisphere from the Arctic Circle to North Africa, and Central America.'
         self.geo = 'Everywhere'
