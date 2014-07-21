@@ -16,9 +16,9 @@ class Page(object):
             <body>'''
         self.content = '''
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><a href="wildlife=0">Cow</a></li>
+            <li><a href="wildlife=1">Duck</a></li>
+            <li><a href="wildlife=2">Fox</a></li>
         </ul>'''
         self.closer = '''
         </body>
