@@ -27,16 +27,20 @@ class MainHandler(webapp2.RequestHandler):
             output = '''
             <div>
                 <h1>{name}</h1>
-                <img src="{url}" alt="{name}" />
-                <p>Phylum: {phylum}</p>
-                <p>Class: {w_class}</p>
-                <p>Order: {order}</p>
-                <p>Family: {family}</p>
-                <p>Genus: {genus}</p>
-                <p>Lifespan: {lifespan}</p>
-                <p>Habitat: {habitat}</p>
-                <p>Geolocation: {geo}</p>
-                <p>Sound: {sound}</p>
+                <div id="image">
+                    <img src="{url}" alt="{name}" />
+                </div>
+                <div id="info">
+                    <p>Phylum: {phylum}</p>
+                    <p>Class: {w_class}</p>
+                    <p>Order: {order}</p>
+                    <p>Family: {family}</p>
+                    <p>Genus: {genus}</p>
+                    <p>Lifespan: {lifespan}</p>
+                    <p>Habitat: {habitat}</p>
+                    <p>Geolocation: {geo}</p>
+                    <p>Sound: {sound}</p>
+                </div>
             </div>'''
             result = output.format(**locals())
             self.response.write(result)
