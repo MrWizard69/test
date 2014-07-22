@@ -2,20 +2,20 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = Page()
+        p = Page() # a reference to the page class
 
-        p.title = 'What Does The Fox Say??'
-        p.font = 'http://fonts.googleapis.com/css?family=Droid+Sans'
-        p.css = 'css/styles.css'
-        cow = Cow()
-        duck = Duck()
-        fox = Fox()
-        wildlife = [cow, duck, fox]
+        p.title = 'What Does The Fox Say??' # my title
+        p.font = 'http://fonts.googleapis.com/css?family=Droid+Sans' # the font I used
+        p.css = 'css/styles.css' # where my style sheet is
+        cow = Cow() # a reference to the cow subclass
+        duck = Duck() # a reference to the duck subclass
+        fox = Fox() # a reference to the fox subclass
+        wildlife = [cow, duck, fox] # my array of animals
         self.response.write(p.print_out())
 
         if self.request.GET:
             animal = int(self.request.GET['wildlife'])
-
+            #this is where the values are applied
             name = wildlife[animal].name
             phylum = wildlife[animal].phylum
             w_class = wildlife[animal].w_class
@@ -27,7 +27,7 @@ class MainHandler(webapp2.RequestHandler):
             habitat = wildlife[animal].habitat
             geo = wildlife[animal].geo
             sound = wildlife[animal].sound
-
+            # this is where it is displayed
             output = '''
             <div>
                 <h1>{name}</h1>
@@ -48,7 +48,7 @@ class MainHandler(webapp2.RequestHandler):
             result = output.format(**locals())
             self.response.write(result)
 
-
+# this is the where all the content resides
 class Page(object):
     def __init__(self):
         self.header = '''
@@ -78,38 +78,38 @@ class Page(object):
         self.__css = ''
         self.__title = ''
         self.__font = ''
-
+    # a getter
     @property
     def css(self):
         return self.__css
-
+    # and a setter
     @css.setter
     def css(self, c):
             self.__css = c
-
+    # a getter
     @property
     def title(self):
             return self.__title
-
+    # and a setter
     @title.setter
     def title(self, t):
             self.__title = t
-
+    # a getter
     @property
     def font(self):
             return self.__font
-
+    # and a setter
     @font.setter
     def font(self, f):
             self.__font = f
 
 
-
+    #when everything is said and done this is where all the information ais spat out
     def print_out(self):
         page = self.header + self.content + self.closer
         output = page.format(**locals())
         return output
-
+#the basic constructor where all the value place holders are made
 class AbstractWildLife(object):
     def __init__(self):
         self.name = ''
@@ -124,6 +124,7 @@ class AbstractWildLife(object):
         self.geo = ''
         self.sound = ''
 
+#my cow subclass
 class Cow(AbstractWildLife):
     def __init__(self):
         super(Cow,self).__init__()
@@ -138,7 +139,7 @@ class Cow(AbstractWildLife):
         self.habitat = 'Grasslands and Forests'
         self.geo = 'On farms everywhere'
         self.sound = 'MEROOOOO'
-
+#my duck subclass
 class Duck(AbstractWildLife):
     def __init__(self):
         super(Duck,self).__init__()
@@ -153,7 +154,7 @@ class Duck(AbstractWildLife):
         self.habitat = 'Rivers, lakes and woodland wetlands'
         self.geo = 'At a pond near you'
         self.sound = 'QUACK QUACK QUACK'
-
+#my fox subclass
 class Fox(AbstractWildLife):
     def __init__(self):
         super(Fox,self).__init__()
