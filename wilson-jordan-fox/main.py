@@ -69,32 +69,32 @@ class Page(object):
         </body>
         </html>'''
 
-            self.__css = ''
-            self.__title = ''
-            self.__font = ''
+        self.__css = ''
+        self.__title = ''
+        self.__font = ''
 
-        @property
-        def css(self):
-            return self.__title
+    @property
+    def css(self):
+        return self.__title
 
-        @css.setter
-        def css(self, c):
+    @css.setter
+    def css(self, c):
             self.__css = c
 
-        @property
-        def title(self):
+    @property
+    def title(self):
             return self.__title
 
-        @title.setter
-        def title(self,t):
+    @title.setter
+    def title(self,t):
             self.__title = t
 
-        @property
-        def font(self):
+    @property
+    def font(self):
             return self.__font
 
-        @font.setter
-        def font(self,f):
+    @font.setter
+    def font(self,f):
             self.__font = f
 
     def print_out(self):
