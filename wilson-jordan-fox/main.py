@@ -42,6 +42,7 @@ class MainHandler(webapp2.RequestHandler):
                     <p>Sound: {sound}</p>
                 </div>
             </div>'''
+
             result = output.format(**locals())
             self.response.write(result)
 
@@ -52,7 +53,7 @@ class Page(object):
         <!DOCTYPE HTML>
         <html>
             <head>
-                <title></title>
+                <title>{self.title}</title>
             </head>
             <body>'''
         self.content = '''
@@ -65,6 +66,12 @@ class Page(object):
         self.closer = '''
         </body>
         </html>'''
+
+        self.__css = ''
+        self.__title = ''
+        self.__font = ''
+
+
 
     def print_out(self):
         return self.header + self.content + self.closer

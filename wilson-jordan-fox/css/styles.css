@@ -1,0 +1,14 @@
+body{
+    background-color: #73613F;
+    color: white;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin-left:20%;
+    display: inline;
+}
