@@ -31,10 +31,8 @@ class MainHandler(webapp2.RequestHandler):
             output = '''
             <div>
                 <h1>{name}</h1>
-                <div id="image">
-                    <img src="{url}" alt="{name}" />
-                </div>
                 <div id="info">
+                    <img src="{url}" alt="{name}" />
                     <p>Phylum: {phylum}</p>
                     <p>Class: {w_class}</p>
                     <p>Order: {order}</p>
@@ -68,7 +66,11 @@ class Page(object):
             <li><a href="?wildlife=1">Duck</a></li>
             <li><a href="?wildlife=2">Fox</a></li>
             <li><a href="http://localhost:13080/">Refresh</a></li>
-        </ul>'''
+        </ul>
+        <div id="info">
+            <p>Cow goes moo and ducks go quack quack. But there's one sound that no one knows... WHAT DOES THE FOX SAY?</p>
+        </div>
+        '''
         self.closer = '''
         </body>
         </html>'''
@@ -163,7 +165,7 @@ class Fox(AbstractWildLife):
         self.genus = 'Canis'
         self.url = 'images/fox.jpg' #wiki commons
         self.lifespan = '5 years'
-        self.habitat = 'The northern hemisphere from the Arctic Circle to North Africa, and Central America.'
+        self.habitat = 'Just about everywhere'
         self.geo = 'Everywhere'
         self.sound = 'Ring-ding-ding-ding-dingeringeding!'
 

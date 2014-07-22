@@ -9,7 +9,34 @@ ul{
 }
 
 li{
-    margin-left:20%;
+    margin-left:17%;
     display: inline;
+}
+
+h1{
+    text-align: center;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    margin-left: 30%;
+    margin-top: 3%;
+}
+
+
+#info{
+
+    background-color: #A67F38;
+    border: 3px solid white;
+    border-radius: 6px;
+    margin: 0 auto;
+    height: 15%;
+    width: 53%;
+}
+
+p{
+    text-align: center;
+    margin: 3%;
 }
 
