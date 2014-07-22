@@ -3,6 +3,10 @@ import webapp2
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
+
+        p.title = 'What Does The Fox Say??'
+        p.font = 'http://fonts.googleapis.com/css?family=Droid+Sans'
+        p.css = 'css/styles.css'
         cow = Cow()
         duck = Duck()
         fox = Fox()
@@ -55,7 +59,7 @@ class Page(object):
             <head>
                 <title>{self.title}</title>
                 <link rel="stylesheet" type="text/css" href="{self.css}" />
-                <link href='{self.font}' rel='stylesheet' type='text/css'>
+                <link href="{self.font}" rel='stylesheet' type='text/css'>
             </head>
             <body>'''
         self.content = '''
@@ -75,7 +79,7 @@ class Page(object):
 
     @property
     def css(self):
-        return self.__title
+        return self.__css
 
     @css.setter
     def css(self, c):
@@ -86,7 +90,7 @@ class Page(object):
             return self.__title
 
     @title.setter
-    def title(self,t):
+    def title(self, t):
             self.__title = t
 
     @property
@@ -94,11 +98,15 @@ class Page(object):
             return self.__font
 
     @font.setter
-    def font(self,f):
+    def font(self, f):
             self.__font = f
 
+
+
     def print_out(self):
-        return self.header + self.content + self.closer
+        page = self.header + self.content + self.closer
+        output = page.format(**locals())
+        return output
 
 class AbstractWildLife(object):
     def __init__(self):
