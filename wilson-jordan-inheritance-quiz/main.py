@@ -6,6 +6,20 @@ class MainHandler(webapp2.RequestHandler):
         car1 = Car1()
         car2 = Car2()
         car3 = Car3()
+
+        garage = [car1, car2, car3]
+
+        if self.request.GET:
+            car = int(self.request.GET['car'])
+            name = garage[car].name
+            year = garage[car].year
+            color = garage[car].color
+
+            results = '''
+            <p>Name: {name}</p>
+            <p>year: {year}</p>
+            <p>color: {color}</p>
+            '''
         self.response.write('Hello world!')
 
 class Page(object):
