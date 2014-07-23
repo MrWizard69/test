@@ -4,10 +4,15 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         p = Page()
         car1 = Car1()
+        car1.color = 'Pink'
         car2 = Car2()
+        car2.year = 2000
         car3 = Car3()
+        car3.year = car1.year
 
         garage = [car1, car2, car3]
+
+        self.response.write(p.print_out())
 
         if self.request.GET:
             car = int(self.request.GET['car'])
@@ -20,14 +25,16 @@ class MainHandler(webapp2.RequestHandler):
             <p>year: {year}</p>
             <p>color: {color}</p>
             '''
-        self.response.write('Hello world!')
+            update = results.format(**locals())
+            self.response.write(update)
+
 
 class Page(object):
     def __init__(self):
         self.header = '''
         <!DOCTYPE HTML>
         <html>
-            <title></title>
+            <title>Inheritance Quiz</title>
         </html>
         <body>'''
         self.content = '''
