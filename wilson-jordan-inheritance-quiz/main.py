@@ -2,6 +2,10 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        p = Page()
+        car1 = Car1()
+        car2 = Car2()
+        car3 = Car3()
         self.response.write('Hello world!')
 
 class Page(object):
@@ -13,14 +17,20 @@ class Page(object):
         </html>
         <body>'''
         self.content = '''
-            Content
+            <ul>
+                <li><a href="?car=0">Car1</a></li>
+                <li><a href="?car=1">Car2</a></li>
+                <li><a href="?car=2">Car3</a></li>
+            </ul>
             '''
         self.closer = '''
         </body>
         </html>'''
 
     def print_out(self):
-        return self.header + self.content + self.closer
+        page = self.header + self.content + self.closer
+        update = page.format(**locals())
+        return update
 
 class AbCar(object):
     def __init__(self):
@@ -53,7 +63,7 @@ class Car3(AbCar):
     def __init__(self):
         super(Car3, self).__init__()
         self.name = "Missy"
-        self.year = "2014"
+        self.year = 2014
         self.color = "Indigo"
 
 
