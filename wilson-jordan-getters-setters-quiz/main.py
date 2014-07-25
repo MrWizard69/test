@@ -2,7 +2,19 @@ import webapp2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        self.response.write('Hello world!')
+        p = Page()
+        c = Counter()
+        p.counter = 0
+
+        if self.request.GET:
+            c.counter += 1
+            self.response.write(c.counter)
+
+        self.response.write(p.print_out())
+
+
+
+
 
 class Page(object):
     def __init__(self):
@@ -13,7 +25,7 @@ class Page(object):
         </head>
         <body>'''
         self.content = '''
-        content
+        <a href="?counter=0">Count Up</a>
         '''
         self.closer = '''
         </body>
