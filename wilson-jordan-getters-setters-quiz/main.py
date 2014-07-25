@@ -28,8 +28,14 @@ class Page(object):
 class Counter(object):
     def __init__(self):
         self.__counter = 0
-        
 
+    @property
+    def counter(self):
+        return self.__counter
+
+    @counter.setter
+    def counter(self, c):
+        self.__counter = c
 
 
 
