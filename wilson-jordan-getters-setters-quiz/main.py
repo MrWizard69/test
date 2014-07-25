@@ -25,6 +25,13 @@ class Page(object):
         self.update = self.page.format(**locals())
         return self.update
 
+class Counter(object):
+    def __init__(self):
+        self.__counter = 0
+        
+
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
