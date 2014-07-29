@@ -86,11 +86,38 @@ class MovieModel(object):
         reviews = xmldoc.getElementsByTagName('review')
 
         for items in reviews:
+
+            #print "test test test test"
+
             movies = MovieObject()
-            movies.title = items.getElementsByTagName('display_title')[0].firstChild.nodeValue
-            movies.rating = items.getElementsByTagName('mpaa_rating')[0].firstChild
-            movies.synops = items.getElementsByTagName('summary_short')[0].firstChild
-            movies.open_date = items.getElementsByTagName('opening_date')[0].firstChild.nodeValue
+            #movies.title = items.getElementsByTagName('display_title')[0].firstChild.nodeValue
+            #movies.rating = items.getElementsByTagName('mpaa_rating')[0].firstChild
+            #movies.synops = items.getElementsByTagName('summary_short')[0].firstChild
+
+            try:
+                 movies.title = items.getElementsByTagName('display_title')[0].firstChild.nodeValue
+            except:
+                movies.title = 'No Title?'
+                pass
+
+            try:
+                movies.rating = items.getElementsByTagName('mpaa_rating')[0].firstChild.nodeValue
+            except:
+                movies.rating = 'Not Rated'
+                pass
+
+            try:
+                movies.synops = items.getElementsByTagName('summary_short')[0].firstChild.nodeValue
+            except:
+                movies.synops = 'No Information'
+                pass
+
+            try:
+                movies.open_date = items.getElementsByTagName('opening_date')[0].firstChild.nodeValue
+            except:
+                movies.open_date = 'Not Released Yet'
+                pass
+
             self.movies.append(movies)
 
     @property
@@ -112,12 +139,12 @@ class MovieView(object):
         self.movies = []
 
     def update(self):
-        for reviews in range(0,20):
+        for review in self.movies:
             self.content +='''
-            <h1>'''+ self.movies[reviews].title +'''</h1>
-            <p>'''+ str(self.movies[reviews].rating) +'''</p>
-            <p>'''+ str(self.movies[reviews].synops) +'''</p>
-            <p>'''+ self.movies[reviews].open_date +'''</p>
+            <h1>'''+ review.title +'''</h1>
+            <p>Rating: '''+ review.rating +'''</p>
+            <p>Review: '''+ review.synops +'''</p>
+            <p>Opening Date: '''+ review.open_date +'''</p>
             '''
 
 
