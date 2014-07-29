@@ -47,6 +47,7 @@ class Page(object):
 class FormPage(Page):
     def __init__(self):
         Page.__init__(self)
+        super(FormPage, self).__init__()
         self.form_opener = '<form method="GET" action="">'
         self.inputs = '''
     <input type="text" name="code" placeholder="Movie Search" />
