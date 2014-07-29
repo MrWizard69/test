@@ -87,8 +87,9 @@ class MovieModel(object):
         for items in reviews:
             movies = MovieObject()
             movies.title = items.getElementsByTagName('display_title')[0].firstChild.nodeValue
-            movies.rating = items.getElementsByTagName('mpaa_rating')[0].firstChild.nodeValue
-            movies.synops = items.getElementsByTagName('summary_short')[0].firstChild.nodeValue
+            movies.rating = items.getElementsByTagName('mpaa_rating')[0].firstChild
+            movies.synops = items.getElementsByTagName('summary_short')[0].firstChild
+            movies.open_date = items.getElementsByTagName('opening_date')[0].firstChild.nodeValue
             self.movies.append(movies)
 
     @property
@@ -113,6 +114,9 @@ class MovieView(object):
         for reviews in range(0,20):
             self.content +='''
             <h1>'''+ self.movies[reviews].title +'''</h1>
+            <p>'''+ str(self.movies[reviews].rating) +'''</p>
+            <p>'''+ str(self.movies[reviews].synops) +'''</p>
+            <p>'''+ self.movies[reviews].open_date +'''</p>
             '''
 
 
