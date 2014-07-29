@@ -88,6 +88,7 @@ class MovieModel(object):
             movies = MovieObject()
             movies.title = items.getElementsByTagName('display_title')[0].firstChild.nodeValue
             movies.rating = items.getElementsByTagName('mpaa_rating')[0].firstChild.nodeValue
+            movies.synops = items.getElementsByTagName('summary_short')[0].firstChild.nodeValue
             self.movies.append(movies)
 
     @property
