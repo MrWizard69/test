@@ -86,13 +86,12 @@ class MovieModel(object):
 
         reviews = xmldoc.getElementsByTagName('review')
         pic = xmldoc.getElementsByTagName('resource')
-        movies = MovieObject()
 
         for items in reviews:
 
             #print "test test test test"
 
-
+            movies = MovieObject()
             #movies.title = items.getElementsByTagName('display_title')[0].firstChild.nodeValue
             #movies.rating = items.getElementsByTagName('mpaa_rating')[0].firstChild
             #movies.synops = items.getElementsByTagName('summary_short')[0].firstChild
@@ -119,6 +118,14 @@ class MovieModel(object):
                 movies.open_date = items.getElementsByTagName('opening_date')[0].firstChild.nodeValue
             except:
                 movies.open_date = 'Not Released Yet'
+                pass
+
+            for item in pic:
+
+                try:
+                    movies.image = item.getElementsByTagName('src')[0].firstChild.nodeValue
+                except:
+                    movies.image = ''
                 pass
 
 
