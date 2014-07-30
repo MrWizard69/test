@@ -1,27 +1,27 @@
 import webapp2
-from xml.dom import minidom
+from xml.dom import minidom # this makes xml work in python
 import urllib2
-from urllib import quote
+from urllib import quote # this makes it possible to type more than one word into the text box
 
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        p = FormPage()
+        p = FormPage() # this references the form page class
 
         if self.request.GET:
             code = self.request.GET['code']
-            m_model = MovieModel()
-            m_model.code = self.request.GET['code']
-            m_model.send_request()
+            m_model = MovieModel() # creates an instance of the model
+            m_model.code = self.request.GET['code'] # passes the var to the model
+            m_model.send_request() # connects to the API
 
-            m_view = MovieView()
+            m_view = MovieView() # the view that's going to show the info
             m_view.movies = m_model.movies
-            m_view.update()
+            m_view.update() # creates the html
             p.page_content = m_view.content
 
         self.response.write(p.print_out())
 
-class Page(object):
+class Page(object): # this is the basic page of the app
     def __init__(self):
         self.header = '''
 <!DOCTYPE HTML>
@@ -49,7 +49,7 @@ class Page(object):
         self.page = self.header + self.content + self.closer
         #self.update = self.page.format(**locals())
 
-class FormPage(Page):
+class FormPage(Page): # this is the form. The form page will actually make the page class around it so all the contents are together
     def __init__(self):
         Page.__init__(self)
         super(FormPage, self).__init__()
@@ -67,7 +67,7 @@ class FormPage(Page):
         self.page = self.header + self.form_header + self.form_opener + self.inputs + self.form_closer + self.page_content + self.closer
         self.update = self.page.format(**locals())
 
-class MovieObject(object):
+class MovieObject(object): # all the info I want to get from the xml
     def __init__(self):
         self.title = ''
         self.rating = ''
@@ -76,15 +76,15 @@ class MovieObject(object):
         self.image = ''
         self.movies = []
 
-class MovieModel(object):
+class MovieModel(object): # this is where the information is passed from the text box and to the api.
     def __init__(self):
         self.movies = []
         self.__mgo = ''
         self.__code = 'movie'
 
     def send_request(self):
-        safe_code = quote(self.code, safe="%/:=&?~#+!$,;'@()*[]")
-        url = 'http://api.nytimes.com/svc/movies/v2/reviews/search.xml?query='+ safe_code +'&api-key=ea616c174e753fcadc69fccd2128aed5:19:69415137'
+        safe_code = quote(self.code, safe="%/:=&?~#+!$,;'@()*[]") # this line allows users to type for example "The Matrix" instead of just "Matrix"
+        url = 'http://api.nytimes.com/svc/movies/v2/reviews/search.xml?query='+ safe_code +'&api-key=ea616c174e753fcadc69fccd2128aed5:19:69415137' # this passes what what ever the user typed in to the url
         req = urllib2.Request(url)
         opener = urllib2.build_opener()
         data = opener.open(req)
@@ -92,7 +92,7 @@ class MovieModel(object):
 
         reviews = xmldoc.getElementsByTagName('review')
 
-        for items in reviews:
+        for items in reviews: # this loop will go through each movie and look to see if each element of information exists, if not place holder info
 
             #print "test test test test"
 
@@ -147,7 +147,7 @@ class MovieModel(object):
     def code(self, c):
         self.__code = c
 
-class MovieView(object):
+class MovieView(object): # this is where the info is actually displayed. Each movie is put into its own container.
     def __init__(self):
         self.mgo = MovieObject()
         self.content = ''
@@ -160,8 +160,8 @@ class MovieView(object):
             <h2>'''+ review.title +'''</h2>
             <p>Rating: '''+ review.rating +'''</p>
             <p>Story: '''+ review.synops +'''</p>
-            <p>Opening Date: '''+ review.open_date +'''</p>
             <img width="100px" height="100px" src="'''+ review.image +'''" />
+            <p>Opening Date: '''+ review.open_date +'''</p>
             </div>
             '''
 
