@@ -28,6 +28,7 @@ class Page(object):
 <html>
     <head>
         <title>Movie App</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
     <body>
     <h1>Search For Your Favorite Movie</h1>
