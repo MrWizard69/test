@@ -123,7 +123,7 @@ class MovieModel(object):
             try:
                 movies.image = items.getElementsByTagName('src')[0].firstChild.nodeValue
             except:
-                movies.image = 'No Image'
+                movies.image = 'images/idk.jpg'
             pass
 
 
@@ -156,7 +156,7 @@ class MovieView(object):
             <p>Rating: '''+ review.rating +'''</p>
             <p>Story: '''+ review.synops +'''</p>
             <p>Opening Date: '''+ review.open_date +'''</p>
-            <img src="'''+ review.image +'''" />
+            <img width="100px" height="100px" src="'''+ review.image +'''" />
             </div>
             '''
 
