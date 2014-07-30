@@ -55,7 +55,7 @@ class FormPage(Page):
         self.form_opener = '<form method="GET" action="">'
         self.inputs = '''
     <input type="text" name="code" placeholder="Movie Search" />
-    <input type="submit" name="submit" />'''
+    <input type="submit" name="submit" value="Search" />'''
 
         self.form_closer = '</form>'
         self.form_header = ''
@@ -79,7 +79,7 @@ class MovieModel(object):
     def __init__(self):
         self.movies = []
         self.__mgo = ''
-        self.__code = ''
+        self.__code = 'movie'
 
     def send_request(self):
         safe_code = quote(self.code, safe="%/:=&?~#+!$,;'@()*[]")
