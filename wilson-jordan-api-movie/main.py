@@ -68,6 +68,7 @@ class MovieObject(object):
         self.rating = ''
         self.synops = ''
         self.open_date = ''
+        self.image = ''
         self.movies = []
 
 class MovieModel(object):
@@ -84,6 +85,7 @@ class MovieModel(object):
         xmldoc = minidom.parse(data)
 
         reviews = xmldoc.getElementsByTagName('review')
+        pic = xmldoc.getElementsByTagName('resource')
 
         for items in reviews:
 
@@ -117,6 +119,9 @@ class MovieModel(object):
             except:
                 movies.open_date = 'Not Released Yet'
                 pass
+
+        for link in pic:
+            
 
             self.movies.append(movies)
 
