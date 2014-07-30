@@ -28,6 +28,7 @@ class Page(object):
         <title>Movie App</title>
     </head>
     <body>
+    <h1>Search For Your Favorite Movie</h1>
     '''
         self.content = 'Content'
 
@@ -54,7 +55,7 @@ class FormPage(Page):
     <input type="submit" name="submit" />'''
 
         self.form_closer = '</form>'
-        self.form_header = 'Search For Your Favorite Movie'
+        self.form_header = ''
         self.page_content = ''
         self.content = self.form_header + self.form_opener + self.inputs + self.form_closer
 
@@ -122,7 +123,7 @@ class MovieModel(object):
             try:
                 movies.image = items.getElementsByTagName('src')[0].firstChild.nodeValue
             except:
-                movies.image = ''
+                movies.image = 'No Image'
             pass
 
 
@@ -150,11 +151,13 @@ class MovieView(object):
     def update(self):
         for review in self.movies:
             self.content +='''
+            <div class="wrapper">
             <h1>'''+ review.title +'''</h1>
             <p>Rating: '''+ review.rating +'''</p>
             <p>Story: '''+ review.synops +'''</p>
             <p>Opening Date: '''+ review.open_date +'''</p>
             <img src="'''+ review.image +'''" />
+            </div>
             '''
 
 
