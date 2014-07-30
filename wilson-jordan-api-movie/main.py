@@ -85,7 +85,6 @@ class MovieModel(object):
         xmldoc = minidom.parse(data)
 
         reviews = xmldoc.getElementsByTagName('review')
-        pic = xmldoc.getElementsByTagName('resource')
 
         for items in reviews:
 
@@ -120,13 +119,11 @@ class MovieModel(object):
                 movies.open_date = 'Not Released Yet'
                 pass
 
-            for item in pic:
-
-                try:
-                    movies.image = item.getElementsByTagName('src')[0].firstChild.nodeValue
-                except:
-                    movies.image = ''
-                pass
+            try:
+                movies.image = items.getElementsByTagName('src')[0].firstChild.nodeValue
+            except:
+                movies.image = ''
+            pass
 
 
 
