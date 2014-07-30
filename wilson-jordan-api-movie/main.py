@@ -54,8 +54,8 @@ class FormPage(Page):
         super(FormPage, self).__init__()
         self.form_opener = '<form method="GET" action="">'
         self.inputs = '''
-    <input type="text" name="code" placeholder="Movie Search" />
-    <input type="submit" name="submit" value="Search" />'''
+    <input id="search" type="text" name="code" autofocus placeholder="Movie Search" />
+    <input id="submit" type="submit" name="submit" value="Search" />'''
 
         self.form_closer = '</form>'
         self.form_header = ''
