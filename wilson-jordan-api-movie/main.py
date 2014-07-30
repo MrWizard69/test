@@ -157,6 +157,7 @@ class MovieView(object):
             <p>Rating: '''+ review.rating +'''</p>
             <p>Story: '''+ review.synops +'''</p>
             <p>Opening Date: '''+ review.open_date +'''</p>
+            <img src="'''+ review.image +'''" />
             '''
 
 
