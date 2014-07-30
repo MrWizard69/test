@@ -1,6 +1,8 @@
 import webapp2
 from xml.dom import minidom
 import urllib2
+from urllib import quote
+
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -79,7 +81,8 @@ class MovieModel(object):
         self.__code = ''
 
     def send_request(self):
-        url = 'http://api.nytimes.com/svc/movies/v2/reviews/search.xml?query='+ self.code +'&api-key=ea616c174e753fcadc69fccd2128aed5:19:69415137'
+        safe_code = quote(self.code, safe="%/:=&?~#+!$,;'@()*[]")
+        url = 'http://api.nytimes.com/svc/movies/v2/reviews/search.xml?query='+ safe_code +'&api-key=ea616c174e753fcadc69fccd2128aed5:19:69415137'
         req = urllib2.Request(url)
         opener = urllib2.build_opener()
         data = opener.open(req)
