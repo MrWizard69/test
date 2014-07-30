@@ -29,6 +29,7 @@ class Page(object):
     <head>
         <title>Movie App</title>
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans" />
     </head>
     <body>
     <h1>Search For Your Favorite Movie</h1>
@@ -156,7 +157,7 @@ class MovieView(object):
         for review in self.movies:
             self.content +='''
             <div class="wrapper">
-            <h1>'''+ review.title +'''</h1>
+            <h2>'''+ review.title +'''</h2>
             <p>Rating: '''+ review.rating +'''</p>
             <p>Story: '''+ review.synops +'''</p>
             <p>Opening Date: '''+ review.open_date +'''</p>
