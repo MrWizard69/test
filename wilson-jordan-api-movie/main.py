@@ -86,12 +86,13 @@ class MovieModel(object):
 
         reviews = xmldoc.getElementsByTagName('review')
         pic = xmldoc.getElementsByTagName('resource')
+        movies = MovieObject()
 
         for items in reviews:
 
             #print "test test test test"
 
-            movies = MovieObject()
+
             #movies.title = items.getElementsByTagName('display_title')[0].firstChild.nodeValue
             #movies.rating = items.getElementsByTagName('mpaa_rating')[0].firstChild
             #movies.synops = items.getElementsByTagName('summary_short')[0].firstChild
@@ -120,8 +121,7 @@ class MovieModel(object):
                 movies.open_date = 'Not Released Yet'
                 pass
 
-        for link in pic:
-            
+
 
             self.movies.append(movies)
 
@@ -148,7 +148,7 @@ class MovieView(object):
             self.content +='''
             <h1>'''+ review.title +'''</h1>
             <p>Rating: '''+ review.rating +'''</p>
-            <p>Review: '''+ review.synops +'''</p>
+            <p>Story: '''+ review.synops +'''</p>
             <p>Opening Date: '''+ review.open_date +'''</p>
             '''
 
