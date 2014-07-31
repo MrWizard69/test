@@ -66,6 +66,38 @@ class ThronesModel(object):
             except:
                 house.name = 'No Name'
 
+            try:
+                house.sigil = item.getElementsByTagName('sigil')[0].firstChild.nodeValue
+            except:
+                house.sigil = 'No Sigil'
+
+            try:
+                house.motto = item.getElementsByTagName('motto')[0].firstChild.nodeValue
+            except:
+                house.motto = 'No Motto'
+
+            try:
+                house.color1 = item.getElementsByTagName('color1')[0].firstChild.nodeValue
+            except:
+                house.color1 = 'No Color'
+
+            try:
+                house.color2 = item.getElementsByTagName('color2')[0].firstChild.nodeValue
+            except:
+                house.color2 = 'No Color'
+
+            try:
+                house.head = item.getElementsByTagName('head')[0].firstChild.nodeValue
+            except:
+                house.name = 'No Head'
+
+            try:
+                house.image = item.getElementsByTagName('image')[0].firstChild.nodeValue
+            except:
+                house.image = ''
+
+        self.house.append(throne)
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
