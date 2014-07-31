@@ -89,7 +89,7 @@ class ThronesModel(object):
             try:
                 house.head = item.getElementsByTagName('head')[0].firstChild.nodeValue
             except:
-                house.name = 'No Head'
+                house.head = 'No Head'
 
             try:
                 house.image = item.getElementsByTagName('image')[0].firstChild.nodeValue
@@ -97,6 +97,25 @@ class ThronesModel(object):
                 house.image = ''
 
         self.house.append(throne)
+
+class ThronesView(object):
+    def __init__(self):
+        self.tgo = ThronesObject()
+        self.content = ''
+        self.house = []
+
+    def update(self):
+        for thrones in self.house:
+            self.content += '''
+            <h1>''' + thrones.name + '''</h1>
+            <p>''' + thrones.sigil + '''</p>
+            <p>''' + thrones.motto + '''</p>
+            <p>''' + thrones.color1 + '''</p>
+            <p>''' + thrones.color2 + '''</p>
+            <p>''' + thrones.color1 + '''</p>
+            <p>''' + thrones.head + '''</p>
+            <img src="''' + thrones.image + '''" />
+            '''
 
 
 app = webapp2.WSGIApplication([
